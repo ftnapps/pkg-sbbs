@@ -1,6 +1,6 @@
-sbbs (3.14a-1) unstable; urgency=low
+sbbs (3.14a-0.1) unstable; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release (Closes: #418776) 
 
- -- Robert James Clay <jame@rocasa.org>  Tue, 26 Feb 2008 17:15:57 -0500
+ -- Robert James Clay <jame@rocasa.org>  Tue, 26 Feb 2008 18:05:57 -0500
 
