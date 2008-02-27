@@ -26,8 +26,8 @@ manpage.1: manpage.sgml
   <!ENTITY dhsection   "<manvolnum>SECTION</manvolnum>">
   <!ENTITY dhemail     "<email>jame@rocasa.org</email>">
   <!ENTITY dhusername  "Robert James Clay">
-  <!ENTITY dhucpackage "<refentrytitle>SBBS</refentrytitle>">
-  <!ENTITY dhpackage   "sbbs">
+  <!ENTITY dhucpackage "<refentrytitle>synchronet</refentrytitle>">
+  <!ENTITY dhpackage   "synchronet">
 
   <!ENTITY debian      "<productname>Debian</productname>">
   <!ENTITY gnu         "<acronym>GNU</acronym>">

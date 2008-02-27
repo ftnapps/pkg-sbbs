@@ -1,13 +1,13 @@
 #!/bin/sh -e
-# /usr/lib/emacsen-common/packages/remove/sbbs
+# /usr/lib/emacsen-common/packages/remove/synchronet
 
 FLAVOR=$1
-PACKAGE=sbbs
+PACKAGE=synchronet
 
 if [ ${FLAVOR} != emacs ]; then
     if test -x /usr/sbin/install-info-altdir; then
         echo remove/${PACKAGE}: removing Info links for ${FLAVOR}
-        install-info-altdir --quiet --remove --dirname=${FLAVOR} /usr/info/sbbs.info.gz
+        install-info-altdir --quiet --remove --dirname=${FLAVOR} /usr/info/synchronet.info.gz
     fi
 
     echo remove/${PACKAGE}: purging byte-compiled files for ${FLAVOR}

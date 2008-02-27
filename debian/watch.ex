@@ -8,15 +8,15 @@ version=3
 
 # Uncomment to examine a Webpage 
 # <Webpage URL> <string match>
-#http://www.example.com/downloads.php sbbs-(.*)\.tar\.gz
+#http://www.example.com/downloads.php synchronet-(.*)\.tar\.gz
 
 # Uncomment to examine a Webserver directory
-#http://www.example.com/pub/sbbs-(.*)\.tar\.gz
+#http://www.example.com/pub/synchronet-(.*)\.tar\.gz
 
 # Uncommment to examine a FTP server
-#ftp://ftp.example.com/pub/sbbs-(.*)\.tar\.gz debian uupdate
+#ftp://ftp.example.com/pub/synchronet-(.*)\.tar\.gz debian uupdate
 
 # Uncomment to find new files on sourceforge, for debscripts >= 2.9
-# http://sf.net/sbbs/sbbs-(.*)\.tar\.gz
+# http://sf.net/synchronet/synchronet-(.*)\.tar\.gz
 
 

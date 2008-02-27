@@ -1,6 +1,6 @@
-# Defaults for sbbs initscript
-# sourced by /etc/init.d/sbbs
-# installed at /etc/default/sbbs by the maintainer scripts
+# Defaults for synchronet initscript
+# sourced by /etc/init.d/synchronet
+# installed at /etc/default/synchronet by the maintainer scripts
 
 #
 # This is a POSIX shell fragment

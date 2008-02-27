@@ -1,4 +1,4 @@
 #
-# Regular cron jobs for the sbbs package
+# Regular cron jobs for the synchronet package
 #
-0 4	* * *	root	sbbs_maintenance
+0 4	* * *	root	synchronet_maintenance

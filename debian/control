@@ -1,11 +1,11 @@
-Source: sbbs
+Source: synchronet
 Section: unknown
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.org>
 Build-Depends: debhelper (>= 5)
 Standards-Version: 3.7.2
 
-Package: sbbs
+Package: synchronet
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: <insert up to 60 chars description>

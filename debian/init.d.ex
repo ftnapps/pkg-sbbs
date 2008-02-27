@@ -11,15 +11,15 @@
 #
 
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/sbin/sbbs
-NAME=sbbs
-DESC=sbbs
+DAEMON=/usr/sbin/synchronet
+NAME=synchronet
+DESC=synchronet
 
 test -x $DAEMON || exit 0
 
-# Include sbbs defaults if available
-if [ -f /etc/default/sbbs ] ; then
-	. /etc/default/sbbs
+# Include synchronet defaults if available
+if [ -f /etc/default/synchronet ] ; then
+	. /etc/default/synchronet
 fi
 
 set -e

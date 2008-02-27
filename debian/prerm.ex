@@ -1,5 +1,5 @@
 #!/bin/sh
-# prerm script for sbbs
+# prerm script for synchronet
 #
 # see: dh_installdeb(1)
 

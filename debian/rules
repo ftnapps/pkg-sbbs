@@ -35,7 +35,7 @@ build-stamp: configure-stamp
 
 	# Add here commands to compile the package.
 	$(MAKE)
-	#docbook-to-man debian/sbbs.sgml > sbbs.1
+	#docbook-to-man debian/synchronet.sgml > synchronet.1
 
 	touch $@
 
@@ -55,8 +55,8 @@ install: build
 	dh_clean -k 
 	dh_installdirs
 
-	# Add here commands to install the package into debian/sbbs.
-	$(MAKE) DESTDIR=$(CURDIR)/debian/sbbs install
+	# Add here commands to install the package into debian/synchronet.
+	$(MAKE) DESTDIR=$(CURDIR)/debian/synchronet install
 
 
 # Build architecture-independent files here.

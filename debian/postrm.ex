@@ -1,5 +1,5 @@
 #!/bin/sh
-# postrm script for sbbs
+# postrm script for synchronet
 #
 # see: dh_installdeb(1)
 
