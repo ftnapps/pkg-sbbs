@@ -1,2 +1,16 @@
 usr/bin
 usr/sbin
+usr/lib/synchronet
+usr/lib/synchronet/xtrn
+var/lib/synchronet
+var/lib/synchronet/data/dirs
+var/lib/synchronet/data/file
+var/lib/synchronet/data/logs
+var/lib/synchronet/data/msgs
+var/lib/synchronet/data/qnet
+var/lib/synchronet/data/subs
+var/lib/synchronet/data/text
+var/lib/synchronet/data/user
+var/lib/synchronet/data/user/ptrs
+srv/ftp
+srv/web
