@@ -1,0 +1,20 @@
+Debian TODO for Synchronet
+
+- Edit debian/control as initial version
+- Edit debian/copyright as initial version
+- Edit debian/README.Debian for initial version
+- Rename manpage.1 as synchronet.1 & edit as base man page for package
+- create man pages for executables. (see if can do some from existing docs?)
+ -use sym links to the 'undocumented' manpage until can get the others written?
+- create manpages file to list all of the man pages to be installed. 
+
+- Prompting for some initial configuration options at installation ? (from Ragnarok)
+ -hostname and sysop info (like system password) 
+ -ports or services that you want to run. 
+ -dove-net setup?
+ -bbs service start at system startup?
+
+
+ 
+ -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 08:49 -0500
+
