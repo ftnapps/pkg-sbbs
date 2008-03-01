@@ -1,5 +1,6 @@
 Debian TODO for Synchronet
 
+Packaging:
 - Edit debian/control as initial version
 - Edit debian/copyright as initial version
 - Edit debian/README.Debian for initial version
@@ -8,6 +9,14 @@ Debian TODO for Synchronet
  -use sym links to the 'undocumented' manpage until can get the others written?
 - create manpages file to list all of the man pages to be installed. 
 
+Librarys:
+- Add source of crytplib, instead of using precompiled library.  Need both for
+being able to do non i386 packages as well as just being neccessary for package
+to be accepted into Debian.   Haveing a separate cyrptlib package would enable
+it to be used for syncterm, although could also have a synchronet-common package
+to handle that.
+
+Configuration:
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
  -hostname and sysop info (like system password) 
  -ports or services that you want to run. 
