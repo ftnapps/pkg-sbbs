@@ -3,8 +3,7 @@ Debian TODO for Synchronet
 Packaging:
 - Edit debian/copyright as initial version
 - Edit debian/README.Debian for initial version
-- Rename manpage.1 as synchronet.1 & edit as base man page for package
-- create man pages for executables. (see if can do some from existing docs?)
+- Create man pages for executables. (see if can do some from existing docs?)
  -use sym links to the 'undocumented' manpage until can get the others written?
 - create manpages file to list all of the man pages to be installed. 
 - debian/control:  Description - Add a note about the BBS shells that it can
@@ -26,5 +25,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 08:49 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 17:17 -0500
 
