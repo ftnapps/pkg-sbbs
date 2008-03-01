@@ -1,6 +1,8 @@
 Synchronet for Debian
 ---------------
 
-<possible notes regarding this package - if none, delete this file>
+    This version of the package uses a pre-compiled version of the cryptlib
+library and is therefore not ready for inclusion into the Debian distribution
+nor is it really usuable for other than i386.  See also debian/TODO.
 
- -- Robert James Clay <jame@rocasa.org>  Tue, 26 Feb 2008 17:15:57 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 09:30 -0500
