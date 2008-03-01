@@ -1,12 +1,33 @@
 Source: synchronet
-Section: unknown
+Section: comm
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.org>
-Build-Depends: debhelper (>= 5)
+Build-Depends: debhelper (>= 5), libncurses5-dev, g++, libnspr4-dev, libmozjs-dev, libx11-dev
 Standards-Version: 3.7.2
+Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
+Vcs-Svn: svn://rocasa.org/sbbsdeb/synchronet/trunk/debian
+Vcs-Browser: http://cvs.synchro.net/cgi-bin/viewcvs.cgi/
+Homepage: http://www.synchro.net
 
 Package: synchronet
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Architecture: i386
+Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
+Recommends: zip, unzip
+Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
+Provides: httpd, httpd-cgi, ftp-server, mail-transport-agent, news-transport-system, pop3-server, telnet-server
+Description: Synchronet BBS Software
+ Synchronet Bulletin Board System (SBBS) Software is a free software package
+ that can turn your personal computer into your own custom online service
+ supporting multiple simultaneous users with hierarchical message and file
+ areas, multi-user chat, and the ever-popular BBS door games.
+ Synchronet development began in 1990 as a program for single-tasking MS-DOS
+ compatible computers and Hayes compatible modems.  In November of 1999, the
+ author began further development of Synchronet specifically for the Internet
+ community and it has since been substantially redesigned as an Internet
+ capable BBS package for Win32 and Unix-x86 platforms integrating standard
+ Internet protocols such as Telnet, SSH, FTP, SMTP, POP3, IRC, NNTP, and HTTP.
+ 
+ 
+ 
+ 
+ 
