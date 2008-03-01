@@ -1,22 +1,12 @@
 Document: synchronet
-Title: Debian synchronet Manual
-Author: <insert document author here>
-Abstract: This manual describes what synchronet is
- and how it can be used to
- manage online manuals on Debian systems.
-Section: unknown
-
-Format: debiandoc-sgml
-Files: /usr/share/doc/synchronet/synchronet.sgml.gz
-
-Format: postscript
-Files: /usr/share/doc/synchronet/synchronet.ps.gz
-
-Format: text
-Files: /usr/share/doc/synchronet/synchronet.text.gz
+Title: Synchronet BBS
+Author: Rob Swindell
+Abstract: This documentation describes what Synchronet BBS
+ is and other information associated with it.
+ Section: unknown
 
 Format: HTML
-Index: /usr/share/doc/synchronet/html/index.html
-Files: /usr/share/doc/synchronet/html/*.html
+Index: /usr/share/doc/synchronet/index.htm
+Files: /usr/share/doc/synchronet/*.html
 
   
