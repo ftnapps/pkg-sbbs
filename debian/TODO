@@ -1,15 +1,25 @@
 Debian TODO for Synchronet
 
 Packaging:
-- Edit debian/copyright as initial version
+
+- Edit debian/rules, adding what's neccessary for building
+- Edit debian/rules, adding what's neccessary for installation
+- Edit debian/init.d; correct path of sbbs to that actually being used,
+- Edit debian/synchronet-default; correct daemon opts ref to match that
+used in init.d.  Add cmd for "SBBSCTRL=" here?
+- Should scfg be put in /usr/bin or /usr/sbin? (menu = /usr/bin...)
+- Names for user:group?  synchronet:sbbs  ?
+- Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
+- Edit debian/control, adding Vcs-Browser for sbbsdeb
+- Edit debian/copyright for initial version
+- Add debian/README.source, explaining how the source was retrieved
+& put together as an orig.tar.gz file.
 - Edit debian/README.Debian for initial version
 - Create man pages for executables. (see if can do some from existing docs?)
- -use sym links to the 'undocumented' manpage until can get the others written?
-- create manpages file to list all of the man pages to be installed. 
 - debian/control:  Description - Add a note about the BBS shells that it can
 emulate?  Add note about scripting languages available/usuable?
 
-Librarys:
+Libraries:
 - Add source of crytplib, instead of using precompiled library.  Need both for
 being able to do non i386 packages as well as just being neccessary for package
 to be accepted into Debian.   Haveing a separate cyrptlib package would enable
@@ -18,12 +28,12 @@ to handle that.
 
 Configuration:
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
- -hostname and sysop info (like system password) 
- -ports or services that you want to run. 
- -dove-net setup?
- -bbs service start at system startup?
+  hostname and sysop info (like system password) 
+  ports or services that you want to run. 
+  dove-net setup?
+  bbs services start at system startup?
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 17:17 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  7 Mar 2008 16:23 -0500
 
