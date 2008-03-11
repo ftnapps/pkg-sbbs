@@ -7,7 +7,7 @@ Standards-Version: 3.7.2
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
 Vcs-Svn: svn://rocasa.org/sbbsdeb/synchronet/trunk/debian
 Vcs-Browser: http://cvs.synchro.net/cgi-bin/viewcvs.cgi/
-Vcs-Browser: http://rocasa.org/cgi-bin/viewcvs.cgi/sbbsdeb/synchronet
+Vcs-Browser: http://rocasa.org/cgi-bin/viewcvs.cgi/syncdeb/synchronet
 Homepage: http://www.synchro.net
 
 Package: synchronet
