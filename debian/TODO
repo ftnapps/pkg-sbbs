@@ -10,18 +10,17 @@ used in init.d.  Add cmd for "SBBSCTRL=" here?
 - Should scfg be put in /usr/bin or /usr/sbin? (menu = /usr/bin...)
 - Names for user:group?  synchronet:sbbs  ?
 - Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
-- Edit debian/control, adding Vcs-Browser for sbbsdeb
 - Edit debian/copyright for initial version
 - Add debian/README.source, explaining how the source was retrieved
 & put together as an orig.tar.gz file.
 - Edit debian/README.Debian for initial version
 - Create man pages for executables. (see if can do some from existing docs?)
 - debian/control:  Description - Add a note about the BBS shells that it can
-emulate?  Add note about scripting languages available/usuable?
+emulate?  Add note about scripting languages available/usable?
 
 Libraries:
-- Add source of crytplib, instead of using precompiled library.  Need both for
-being able to do non i386 packages as well as just being neccessary for package
+- Add source of crytplib, instead of using precompiled library.  Need this both for 
+being able to do non i386 packages as well as just being neccessary for the package
 to be accepted into Debian.   Haveing a separate cyrptlib package would enable
 it to be used for syncterm, although could also have a synchronet-common package
 to handle that.
@@ -35,5 +34,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  7 Mar 2008 16:23 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  10 Mar 2008 20:55 -0500
 
