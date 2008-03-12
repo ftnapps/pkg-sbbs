@@ -1,6 +1,6 @@
-synchronet (3.14a-0.1) unstable; urgency=low
+synchronet (3.15a~cvs-20080211-0.1) unstable; urgency=low
 
-  * Initial release (Closes: #418776) 
+  * Initial Debian release (Closes: #418776) 
 
- -- Robert James Clay <jame@rocasa.org>  Tue, 26 Feb 2008 18:05:57 -0500
+ -- Robert James Clay <jame@rocasa.org>  Tue, 12 Mar 2008 19:57:27 -0400
 
