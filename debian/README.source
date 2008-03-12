@@ -1,21 +1,21 @@
-    Createing a source archive for Synchronet release 3.14a
+    Createing a source archive for Synchronet release 3.15a, from CVS as of 20080211
     
 Note that this version of the procedure uses the pre-compiled library file for cryptlib.
 
     
 cd /path/to/working/directory
 
-    # source files & header file for cryptlib
+    # Downloaded sbbs_src.tgz on 11 February 2008, for CVS as of 20080211.
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a src-sbbs3 
 
-    # then delete include/microsoft, include/mozilla, include/sdl
+    # Can then delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
 
-    # precompiled library file for cryptlib
-cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a lib/cryptlib/linux.release/libcl.so.3.3.0 
+    # Create a symlink from libcl.so.3.3.0 to libcl.so
 
-    # -> create a symlink from libcl.so.3.3.0 to libcl.so
+    # Get the require modules for running synchronet.  Exclude docs/js/guide &
+    # docs/js/ref or delete afterwards if needed to save space.
+cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -D 20080211 run-sbbs3 
 
-    # Get the require modules for running synchronet.  Exclude docs/js/guide & docs/js/ref or delete afterwards.
-cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
+    # Extract contents of source archive, then move run-sbbs3 directories to same directory as source.
 
 
