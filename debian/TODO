@@ -3,16 +3,9 @@ Debian TODO for Synchronet
 Packaging:
 
 - Edit debian/rules, adding what's neccessary for installation
-- docs/images is being installed to the main doc directory instead of to
-  a sub-directory of it.
-- Edit debian/rules, adding what's neccessary for 'make clean'
-- Edit debian/init.d; correct path of sbbs to that actually being used,
-- Edit debian/synchronet-default; correct daemon opts ref to match that
-used in init.d.  Add cmd for "SBBSCTRL=" here?
-- Should scfg be put in /usr/bin or /usr/sbin or /usr/lib/synchronet? (menu = /usr/bin...)
+- Edit debian/synchronet-default;  Add cmd for "SBBSCTRL=" here?
 - Names for user:group?  synchronet:sbbs  ?
 - Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
-- Edit debian/NEWS.Debian for initial version
 - Create man pages for executables. (see if can do some from existing docs?)
 - debian/control:  Description - Add a note about the BBS shells that it can
 emulate?  Add note about scripting languages available/usable?
@@ -33,5 +26,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  10 Mar 2008 20:55 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  13 Mar 2008 20:46 -0500
 
