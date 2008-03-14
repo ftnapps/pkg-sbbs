@@ -62,7 +62,16 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/synchronet.
-	#$(MAKE) DESTDIR=$(CURDIR)/debian/synchronet install
+	HW=`uname -m`
+	dh_install src/conio/gcc.linux.$(HW).lib.release/libciolib_mt.a usr/lib/synchronet
+	dh_install src/smblib/gcc.linux.$(HW).lib.release/libsmb.a usr/lib/synchronet
+	dh_install src/uifc/gcc.linux.$(HW).lib.release/libuifc_mt.a usr/lib/synchronet
+	dh_install src/xpdev/gcc.linux.$(HW).lib.release/libxpdev* usr/lib/synchronet
+	dh_install src/sbbs3/gcc.linux.$(HW).lib.release/lib* usr/lib/synchronet
+	dh_install src/sbbs3/gcc.linux.$(HW).exe.release/* usr/lib/synchronet
+	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.release/scfg usr/lib/synchronet
+	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.release/uedit usr/lib/synchronet
+	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor usr/lib/synchronet
 
 
 # Build architecture-independent files here.
