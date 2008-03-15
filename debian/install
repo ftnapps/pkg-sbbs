@@ -9,7 +9,7 @@ node*/*	var/lib/synchronet
 text/menu/*	usr/share/synchronet/text/menu
 text/menu/major/*	usr/share/synchronet/text/menu/major
 text/menu/pcboard/*	usr/share/synchronet/text/menu/pcboard
-text/menu/renegede/*	usr/share/synchronet/text/menu/renegede
+text/menu/renegade/*	usr/share/synchronet/text/menu/renegade
 text/menu/sdos/*	usr/share/synchronet/text/menu/sdos
 text/menu/simple/*	usr/share/synchronet/text/menu/simple
 text/menu/wildcat/*	usr/share/synchronet/text/menu/wildcat
@@ -17,11 +17,11 @@ text/menu/wwiv/*	usr/share/synchronet/text/menu/wwiv
 web/lib/*	usr/share/synchronet/web/lib
 web/root/*	usr/share/synchronet/web/root
 web/templates/*	usr/share/synchronet/web/templates
-xtrn/sbl/sbj	usr/lib/syncrhonet/xtrn/sbj
-xtrn/sbl/sbj.cfg	usr/lib/syncrhonet/xtrn/sbj
-xtrn/sbl/sbj.doc	usr/lib/syncrhonet/xtrn/sbj
-xtrn/sbl/sbj.msg	usr/lib/syncrhonet/xtrn/sbj
-xtrn/sbl/sbjclean	usr/lib/syncrhonet/xtrn/sbj
+xtrn/sbj/sbj	usr/lib/syncrhonet/xtrn/sbj
+xtrn/sbj/sbj.cfg	usr/lib/syncrhonet/xtrn/sbj
+xtrn/sbj/sbj.doc	usr/lib/syncrhonet/xtrn/sbj
+xtrn/sbj/sbj.msg	usr/lib/syncrhonet/xtrn/sbj
+xtrn/sbj/sbjclean	usr/lib/syncrhonet/xtrn/sbj
 xtrn/sbl/sbl	usr/lib/syncrhonet/xtrn/sbl
 xtrn/sbl/sbl2smb	usr/lib/syncrhonet/xtrn/sbl
 xtrn/sbl/sbl.cfg	usr/lib/syncrhonet/xtrn/sbl
