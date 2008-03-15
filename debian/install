@@ -5,7 +5,10 @@ exec/*	usr/lib/syncrhonet
 exec/tone/*	usr/lib/synchronet/tone
 lib/cryptlib/linux.release/libcl.so.3.3.0	usr/lib/synchronet
 text/*	usr/share/synchronet/text
-node*/*	var/lib/synchronet
+node1/*	var/lib/synchronet/node1
+node2/*	var/lib/synchronet/node2
+node3/*	var/lib/synchronet/node3
+node4/*	var/lib/synchronet/node4
 text/menu/*	usr/share/synchronet/text/menu
 text/menu/major/*	usr/share/synchronet/text/menu/major
 text/menu/pcboard/*	usr/share/synchronet/text/menu/pcboard
