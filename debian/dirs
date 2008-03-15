@@ -12,4 +12,7 @@ var/lib/synchronet/subs
 var/lib/synchronet/text
 var/lib/synchronet/user
 var/lib/synchronet/user/ptrs
+var/spool/sbbs
+var/spool/sbbs/inb
+var/spool/sbbs/outb
 srv
