@@ -30,6 +30,9 @@ SCRIPTNAME=/etc/init.d/$NAME
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
 
+# Exit if not yet configured.
+[ $SBBS_ENABLE = "No" ] && return 0
+
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh
 

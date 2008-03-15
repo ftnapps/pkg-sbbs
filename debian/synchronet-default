@@ -6,5 +6,9 @@
 # This is a POSIX shell fragment
 #
 
+# Run Synchronet at startup ? Set to "Yes" after configuring Synchronet
+# in order for it to start at bootup.
+SBBS_ENABLE=No
+
 # Additional options that are passed to the Daemon.
 DAEMON_ARGS=""
