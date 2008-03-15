@@ -1,8 +1,32 @@
 Synchronet for Debian
 ---------------
 
-    This version of the package uses a pre-compiled version of the cryptlib
-library and is therefore not ready for inclusion into the Debian distribution
-nor is it really usuable for other than i386.  See also debian/TODO.
+Directories
 
- -- Robert James Clay <jame@rocasa.org>  Sat,  1 Mar 2008 09:30 -0500
+    Synchronet (SBBS) content directories are installed as follows:
+
+    Synchronet executables and libraries
+exec/*	/usr/lib/synchronet
+exec/xtrn/*	/usr/lib/synchronet/xtrn
+
+    Cryptlib library file libcl.so.3.3.0 is installed to /usr/lib/syncrhonet and symlinked to libcl.so
+    
+    Synchronet ctrl, text, & web content are installed/updated as follows:
+ctrl/*  /usr/share/synchronet/ctrl 
+text/*  /usr/share/synchronet/text
+web/*   /usr/share/synchronet/web
+
+    An /etc/synchronet directory is created, and is used by the example Debian sbbs.ini file.
+    An /var/lib/synchronet/text directory is created, and is used by the example Debian sbbs.ini file.
+
+    Synchronet Documentation is installed as follows:
+doc/*	/usr/share/doc/synchronet  (except docs/js)
+
+    Example Debian ini/cfg files are installed to /usr/share/doc/synchonet/examples.
+    Also, doc-base is used to register the docs index.htm file
+
+    A /var/spool/sbbs directory is created, and is used by the example Debian binkd.cfg file.
+
+    See also debian/TODO.
+
+ -- Robert James Clay <jame@rocasa.org>  Fri,  14 Mar 2008 21:04 -0400
