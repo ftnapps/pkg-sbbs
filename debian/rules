@@ -36,7 +36,7 @@ build-stamp: configure-stamp
 	# Add here commands to compile the package.
 	$(MAKE) -C src/sbbs3 RELEASE=1 JSLIB=mozjs
 	$(MAKE) -C src/sbbs3/scfg RELEASE=1
-	$(MAKE) -C src/sbbs3/menuedit	
+#	$(MAKE) -C src/sbbs3/menuedit	
 	$(MAKE) -C src/sbbs3/syncview
 	$(MAKE) -C src/sbbs3/umonitor
 	$(MAKE) -C src/sbbs3/uedit
@@ -52,7 +52,7 @@ clean:
 	# Add here commands to clean up after the build process.
 	-$(MAKE) -C src/sbbs3 clean
 	-$(MAKE) -C src/sbbs3/scfg clean
-	-$(MAKE) -C src/sbbs3/menuedit clean
+#	-$(MAKE) -C src/sbbs3/menuedit clean
 	-$(MAKE) -C src/sbbs3/syncview clean
 	-$(MAKE) -C src/sbbs3/umonitor clean
 	-$(MAKE) -C src/sbbs3/uedit clean
@@ -74,7 +74,7 @@ install: build
 	dh_install src/sbbs3/gcc.linux.$(HW).lib.release/lib* usr/lib/synchronet
 	dh_install src/sbbs3/gcc.linux.$(HW).exe.release/* usr/lib/synchronet
 	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.release/scfg usr/lib/synchronet
-	dh_install src/sbbs3/menuedit/gcc.linux.$(HW).exe.release/menuedit usr/lib/synchronet
+#	dh_install src/sbbs3/menuedit/gcc.linux.$(HW).exe.release/menuedit usr/lib/synchronet
 	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.release/syncview usr/lib/synchronet
 	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.release/uedit usr/lib/synchronet
 	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor usr/lib/synchronet
