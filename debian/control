@@ -16,7 +16,7 @@ Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Recommends: zip, unzip
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
 Provides: httpd, httpd-cgi, ftp-server, mail-transport-agent, news-transport-system, pop3-server, telnet-server
-Description: Synchronet BBS Software
+Description: SBBS - Synchronet BBS Software
  Synchronet Bulletin Board System (SBBS) Software is a free software package
  that can turn your personal computer into your own custom online service
  supporting multiple simultaneous users with hierarchical message and file
