@@ -9,7 +9,6 @@ var/lib/synchronet/logs
 var/lib/synchronet/msgs
 var/lib/synchronet/qnet
 var/lib/synchronet/subs
-var/lib/synchronet/text
 var/lib/synchronet/user
 var/lib/synchronet/user/ptrs
 var/spool/sbbs
