@@ -2,22 +2,36 @@ Debian TODO for Synchronet
 
 Packaging:
 
-- Edit debian/rules, adding what's neccessary for installation
+- Edit, adding what's neccessary for xtrn/sbj
+- Edit, adding what's neccessary for builtin usage of dosemu
+- Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
+- separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
+  allow for separate packaging for any similar extensions.
+- separate packaging for web templates? 
 - Edit debian/synchronet-default;  Add cmd for "SBBSCTRL=" here?
 - Names for user:group?  synchronet:sbbs  ?
 - Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
 - Create man pages for executables. (see if can do some from existing docs?)
 - debian/control:  Description - Add a note about the BBS shells that it can
 emulate?  Add note about scripting languages available/usable?
+- text/*: debian package only installs/updates to /usr/share/synchronet/text.  Add debconf question
+about if to copy to install directory, & if so to where?
+- web/*: debian package only installs/updates to /usr/share/synchronet/web.   Add debconf question
+about if to copy to install directory, & if so to where?
 
 Libraries:
-- Add source of crytplib, instead of using precompiled library.  Need this both for 
-being able to do non i386 packages as well as just being neccessary for the package
-to be accepted into Debian.   Haveing a separate cyrptlib package would enable
-it to be used for syncterm, although could also have a synchronet-common package
-to handle that.
+- Symlink of libcl.so to libcl.so.3.3.0 so only have to install one of them?
+- Add source compilation of crytplib, instead of using precompiled library.  Need
+this both for being able to do non i386 packages as well as just being neccessary
+for the package to be accepted into Debian.   Haveing a separate cyrptlib package
+would enable it to be used for syncterm, although there could also be a
+synchronet-common package to handle that.
 
 Configuration:
+- Set startup files so that sbbs is not started automatically until it has been specifically
+  enabled to do so;  this helps ensure that an attempt to start it is not done until after
+  it has been configured. 
+- Create & use debian/po, so that debconf messages can be translated.
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
   hostname and sysop info (like system password) 
   ports or services that you want to run. 
@@ -26,5 +40,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  13 Mar 2008 20:46 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sat,  14 Mar 2008 18:56 -0400
 
