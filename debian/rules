@@ -66,18 +66,19 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/synchronet.
-	HW=`uname -m`
-	dh_install src/conio/gcc.linux.$(HW).lib.release/libciolib_mt.a usr/lib/synchronet
-	dh_install src/smblib/gcc.linux.$(HW).lib.release/libsmb.a usr/lib/synchronet
-	dh_install src/uifc/gcc.linux.$(HW).lib.release/libuifc_mt.a usr/lib/synchronet
-	dh_install src/xpdev/gcc.linux.$(HW).lib.release/libxpdev* usr/lib/synchronet
-	dh_install src/sbbs3/gcc.linux.$(HW).lib.release/lib* usr/lib/synchronet
-	dh_install src/sbbs3/gcc.linux.$(HW).exe.release/* usr/lib/synchronet
-	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.release/scfg usr/lib/synchronet
-#	dh_install src/sbbs3/menuedit/gcc.linux.$(HW).exe.release/menuedit usr/lib/synchronet
-	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.release/syncview usr/lib/synchronet
-	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.release/uedit usr/lib/synchronet
-	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor usr/lib/synchronet
+	#HW := $(shell uname -m)
+	# && echo "HW =" $$HW
+	dh_install src/conio/gcc.linux.$(shell uname -m).lib.release/libciolib_mt.a usr/lib/synchronet
+	dh_install src/smblib/gcc.linux.$(shell uname -m).lib.release/libsmb.a usr/lib/synchronet
+	dh_install src/uifc/gcc.linux.$(shell uname -m).lib.release/libuifc_mt.a usr/lib/synchronet
+	dh_install src/xpdev/gcc.linux.$(shell uname -m).lib.release/libxpdev* usr/lib/synchronet
+	dh_install src/sbbs3/gcc.linux.$(shell uname -m).lib.release/lib* usr/lib/synchronet
+	dh_install src/sbbs3/gcc.linux.$(shell uname -m).exe.release/* usr/lib/synchronet
+	dh_install src/sbbs3/scfg/gcc.linux.$(shell uname -m).exe.release/scfg usr/lib/synchronet
+#	dh_install src/sbbs3/menuedit/gcc.linux.$(shell uname -m).exe.release/menuedit usr/lib/synchronet
+	dh_install src/sbbs3/syncview/gcc.linux.$(shell uname -m).exe.debug/syncview usr/lib/synchronet
+	dh_install src/sbbs3/uedit/gcc.linux.$(shell uname -m).exe.debug/uedit usr/lib/synchronet
+	dh_install src/sbbs3/umonitor/gcc.linux.$(shell uname -m).exe.debug/umonitor usr/lib/synchronet
 
 
 # Build architecture-independent files here.
