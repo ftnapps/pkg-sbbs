@@ -19,7 +19,6 @@ PATH=/sbin:/usr/sbin:/bin:/usr/bin
 DESC="Synchronet BBS"
 NAME=sbbs
 DAEMON=/usr/lib/synchronet/$NAME
-#DAEMON_ARGS="--options args"
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
