@@ -12,5 +12,4 @@ var/lib/synchronet/subs
 var/lib/synchronet/text
 var/lib/synchronet/user
 var/lib/synchronet/user/ptrs
-srv/ftp
-srv/web
+srv
