@@ -1,6 +1,9 @@
 Debian TODO for Synchronet
 
 Packaging:
+- The Java Telnet Applet (jta) is already a standard packaage in Debian:  don't install
+  any of web/root/telnet as part of the debian package, unless there is already something
+  there that is specific to Synchronet?  In debian/control;  mark jta as Recommends? Suggests?
 - Names for user:group?  sbbs:sbbs? synchronet:sbbs  ?
 - Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
 - Createing a synchronet-dbg package?   (Check references.)  
@@ -11,30 +14,29 @@ Packaging:
   allow for separate packaging for any similar extensions.
 - separate packaging for web templates? 
 - debian/control:  Description - Add a note about the BBS shells that it can
-emulate?  Add note about scripting languages available/usable?
+  emulate?  Add note about scripting languages available/usable?
 - find better way of passing the results of uname -m to the dh_install lines in debian/rules;
-tried defining a variable but couldn't get that to work.
+  tried defining a variable but couldn't get that to work.
 
 Libraries:
 - Symlink of libcl.so to libcl.so.3.3.0 so only have to install one of them?
-- Warnings by package checkers (lintian, linda) about RPATH setting in binaries. Can that be defined at compile time?
+- Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
+  Can that be defined at compile time? (search keywords RPATH, disable-rpath)
 - "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
-following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
-That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
-to expect a version number in a particular format as part of the name.  (see if dh_makeshlibs helps with this.)
+  following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
+  That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
+  to expect a version number in a particular format as part of the name. 
 - Add source compilation of crytplib, instead of using precompiled library.  Need
-this both for being able to do non i386 packages as well as just being neccessary
-for the package to be accepted into Debian.   Haveing a separate cyrptlib package
-would enable it to be used for syncterm, although there could also be a
-synchronet-common package to handle that.
+  this both for being able to do non i386 packages as well as just being neccessary
+  for the package to be accepted into Debian.   Haveing a separate cyrptlib package
+  would enable it to be used for syncterm, although there could also be a
+  synchronet-common package to handle that.
 
 Configuration:
-- Set startup files so that sbbs is not started automatically until it has been specifically
-  enabled to do so;  this helps ensure that an attempt to start it is not done until after
-  it has been configured. 
+- Either install something to /etc/synchronet or put it in debian/dirs
 - Create & use debian/po, so that debconf messages can be translated.
-- text/*, web/*: debian package only installs/updates to /usr/share/synchronet.  Add debconf questions
-about if to copy to install directory, & if so to where? /srv/sbbs?
+- ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/synchronet.
+  Add debconf questions about if to copy to runtime directory, & if so to where? /srv/sbbs?
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
   hostname and sysop info (like system password) 
   ports or services that you want to run. 
@@ -43,5 +45,5 @@ about if to copy to install directory, & if so to where? /srv/sbbs?
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  15 Mar 2008 14:39 -0400
+ -- Robert James Clay <jame@rocasa.org>  Sat,  16 Mar 2008 14:01 -0400
  
