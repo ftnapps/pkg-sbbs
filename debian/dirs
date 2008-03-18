@@ -14,4 +14,3 @@ var/lib/synchronet/user/ptrs
 var/spool/sbbs
 var/spool/sbbs/inb
 var/spool/sbbs/outb
-srv
