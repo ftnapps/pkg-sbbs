@@ -1,9 +1,6 @@
 Debian TODO for Synchronet
 
 Packaging:
-- The Java Telnet Applet (jta) is already a standard packaage in Debian:  don't install
-  any of web/root/telnet as part of the debian package, unless there is already something
-  there that is specific to Synchronet?  In debian/control;  mark jta as Recommends? Suggests?
 - Names for user:group?  sbbs:sbbs? synchronet:sbbs  ?
 - Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
 - Createing a synchronet-dbg package?   (Check references.)  
@@ -16,7 +13,10 @@ Packaging:
 - debian/control:  Description - Add a note about the BBS shells that it can
   emulate?  Add note about scripting languages available/usable?
 - find better way of passing the results of uname -m to the dh_install lines in debian/rules;
-  tried defining a variable but couldn't get that to work.
+  tried defining a variable but couldn't get that to work.  Define it completely outside of 
+  the target rule?
+- The Java Telnet Applet (jta) is already a standard packaage in Debian:  invesitgate the use
+  of that version of jta with synchronet.  
 
 Libraries:
 - Symlink of libcl.so to libcl.so.3.3.0 so only have to install one of them?
@@ -45,5 +45,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,  16 Mar 2008 14:01 -0400
+ -- Robert James Clay <jame@rocasa.org>  Mon,  17 Mar 2008 20:17 -0400
  

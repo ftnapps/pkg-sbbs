@@ -13,7 +13,8 @@ cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a src-s
     # Create a symlink from libcl.so.3.3.0 to libcl.so
 
     # Get the require modules for running synchronet.  Exclude docs/js/guide &
-    # docs/js/ref or delete afterwards if needed to save space.
+    # docs/js/ref or delete afterwards if needed to save space.   Also exclude or delete 
+    #afterwards the directory web/root/telnet/tools.
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -D 20080211 run-sbbs3 
 
     # Extract contents of source archive, then move run-sbbs3 directories to same directory as source.
