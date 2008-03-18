@@ -73,7 +73,7 @@ install: build
 	dh_install src/xpdev/gcc.linux.$(shell uname -m).lib.debug/libxpdev* usr/lib/synchronet
 	dh_install src/sbbs3/gcc.linux.$(shell uname -m).lib.debug/lib* usr/lib/synchronet
 	dh_install src/sbbs3/gcc.linux.$(shell uname -m).exe.debug/* usr/lib/synchronet
-	dh_install src/sbbs3/scfg/gcc.linux.$(shell uname -m).exe.debug/scfg usr/lib/synchronet
+	dh_install src/sbbs3/scfg/gcc.linux.$(shell uname -m).exe.debug/scfg* usr/lib/synchronet
 #	dh_install src/sbbs3/menuedit/gcc.linux.$(shell uname -m).exe.debug/menuedit usr/lib/synchronet
 	dh_install src/sbbs3/syncview/gcc.linux.$(shell uname -m).exe.debug/syncview usr/lib/synchronet
 	dh_install src/sbbs3/uedit/gcc.linux.$(shell uname -m).exe.debug/uedit usr/lib/synchronet
