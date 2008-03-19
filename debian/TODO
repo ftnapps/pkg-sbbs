@@ -2,37 +2,39 @@ Debian TODO for Synchronet
 
 Packaging:
 - Names for user:group?  sbbs:sbbs? synchronet:sbbs  ?
-- Add "SBBSCTRL=" to ~/.bash_profile ? Any other environment variables?
 - Createing a synchronet-dbg package?   (Check references.)  
 - Create man pages for executables. (see if can do some from existing docs?)
 - Edit, adding what's neccessary for built in usage of dosemu
 - Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
+- debian/control:  Description - Add a note about the BBS shells that it can
+  emulate?  Add note about scripting languages available/usable?
 - separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
   allow for separate packaging for any similar extensions.
 - separate packaging for web templates? 
-- debian/control:  Description - Add a note about the BBS shells that it can
-  emulate?  Add note about scripting languages available/usable?
 - find better way of passing the results of uname -m to the dh_install lines in debian/rules;
   tried defining a variable but couldn't get that to work.  Define it completely outside of 
   the target rule?
+- At least for package purge;  delete /usr/lib/synchronet/*bin.
 - The Java Telnet Applet (jta) is already a standard packaage in Debian:  invesitgate the use
-  of that version of jta with synchronet.  
+  of that version of jta, instead of the version that is distributed with synchronet.  
 
 Libraries:
-- Symlink of libcl.so to libcl.so.3.3.0 so only have to install one of them?
 - Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
   Can that be defined at compile time? (search keywords RPATH, disable-rpath)
 - "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
   following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
   That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
   to expect a version number in a particular format as part of the name. 
-- Add source compilation of crytplib, instead of using precompiled library.  Need
+- Add source compilation of cryptlib, instead of using precompiled library.  Need
   this both for being able to do non i386 packages as well as just being neccessary
-  for the package to be accepted into Debian.   Haveing a separate cyrptlib package
+  for the package to be accepted into Debian.   Haveing a separate cryptlib package
   would enable it to be used for syncterm, although there could also be a
   synchronet-common package to handle that.
 
 Configuration:
+- While still using the precompiled version of libcl, a symlink to the versioned file
+  needs to be put in /usr/lib
+- node directorys need to be at the base of the sbbs dir? rather than in the data dir?
 - Either install something to /etc/synchronet or put it in debian/dirs
 - Create & use debian/po, so that debconf messages can be translated.
 - ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/synchronet.
@@ -45,5 +47,5 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Mon,  17 Mar 2008 20:17 -0400
+ -- Robert James Clay <jame@rocasa.org>  Mon,  18 Mar 2008 21:43 -0400
  
