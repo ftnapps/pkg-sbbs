@@ -34,7 +34,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIB=mozjs
+	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIB=mozjs USE_DOSEMU=1
 	$(MAKE) -C src/sbbs3/scfg DEBUG=1
 #	$(MAKE) -C src/sbbs3/menuedit	
 	$(MAKE) -C src/sbbs3/syncview
