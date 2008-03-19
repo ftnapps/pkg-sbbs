@@ -1,7 +1,7 @@
 This package was debianized by Robert James Clay <jame@rocasa.org> on
 Tue, 26 Feb 2008 17:15:57 -0500.
 
-It was downloaded from <fill in http/ftp site>
+It was downloaded from http://www.synchro.net
 
 Upstream Author: Rob Swindell <rob@synchro.net>
 
@@ -32,3 +32,12 @@ is licensed under the GPL, see above.
 
 # Please also look if there are files or directories which have a
 # different copyright/license attached and list them here.
+
+The Java Telnet Applet                                                                                                                  
+                                                                                                                                        
+Authors: Matthias L. Jugel (leo@first.gmd.de)                                                                                           
+         Marcus Mei.ner (msmeissn@cip.informatik.uni-erlangen.de) 
+
+See installed directory /usr/share/synchronet/web/root/telnet, where the files
+COPYING AND COPYING.LIB can be found.
+	 
