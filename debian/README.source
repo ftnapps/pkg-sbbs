@@ -13,6 +13,8 @@ cd /path/to/working/directory
     # Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
 cd lib/cryptlib/linux.release
 ln -s libcl.so.3.3.0 libcl.so
+    # this is needed for the package build (needs to be redone if doing multiple builds)
+ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
 
     # Get the required modules for running synchronet.  Exclude docs/js/guide &
     # docs/js/ref or delete afterwards if needed to save space.   Also exclude or delete 
