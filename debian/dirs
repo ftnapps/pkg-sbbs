@@ -1,5 +1,7 @@
+etc/synchronet
 usr/bin
 usr/sbin
+usr/lib
 usr/lib/synchronet
 usr/lib/synchronet/xtrn
 var/lib/synchronet
