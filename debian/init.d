@@ -27,7 +27,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -x "$DAEMON" ] || exit 0
 
 # Read configuration variable file if it is present
-[ -r /etc/default/$NAME ] && . /etc/default/$NAME
+[ -r /etc/default/syncrhonet ] && . /etc/default/synchronet
 
 # Exit if not yet configured.
 [ "$SBBS_ENABLE" = "No" ] && exit 0
