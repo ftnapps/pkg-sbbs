@@ -14,17 +14,21 @@ Packaging:
 - find better way of passing the results of uname -m to the dh_install lines in debian/rules;
   tried defining a variable but couldn't get that to work.  Define it completely outside of 
   the target rule?
-- At least for package purge;  delete /usr/lib/synchronet/*bin.
-- The Java Telnet Applet (jta) is already a standard packaage in Debian:  invesitgate the use
+- At least for package purge;  delete /usr/lib/synchronet/*bin
+- Add reminder that even a package purge will not remove the runtime directorys that my be setup.
+- The Java Telnet Applet (jta) is already a standard packaage in Debian:  investigate the use
   of that version of jta, instead of the version that is distributed with synchronet.  
 
 Libraries:
+- When installed on a system where it was not compiled & an attempt is made to start it, sbbs
+  cannot find the libsbbs.so library file, which is installed in /usr/lib/synchronet.
 - Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
   Can that be defined at compile time? (search keywords RPATH, disable-rpath)
 - "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
   following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
   That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
   to expect a version number in a particular format as part of the name. 
+- Add usage of libsdl?  (libsdl1.2-dev, libsdl1.2debian-all?)
 - Add source compilation of cryptlib, instead of using precompiled library.  Need
   this both for being able to do non i386 packages as well as just being neccessary
   for the package to be accepted into Debian.   Haveing a separate cryptlib package
@@ -32,8 +36,6 @@ Libraries:
   synchronet-common package to handle that.
 
 Configuration:
-- While still using the precompiled version of libcl, a symlink to the versioned file
-  needs to be put in /usr/lib
 - node directorys need to be at the base of the sbbs dir? rather than in the data dir?
 - Either install something to /etc/synchronet or put it in debian/dirs
 - Create & use debian/po, so that debconf messages can be translated.
@@ -47,5 +49,4 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Mon,  18 Mar 2008 21:43 -0400
-
+ -- Robert James Clay <jame@rocasa.org>  Thu,  22 Mar 2008 18:47 -0400
