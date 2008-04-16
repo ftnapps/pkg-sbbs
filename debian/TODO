@@ -4,7 +4,6 @@ Packaging:
 - Names for user:group?  sbbs:sbbs? synchronet:sbbs  ?
 - Createing a synchronet-dbg package?   (Check references.)  
 - Create man pages for executables. (see if can do some from existing docs?)
-- Edit, adding what's neccessary for built in usage of dosemu
 - Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
 - debian/control:  Description - Add a note about the BBS shells that it can
   emulate?  Add note about scripting languages available/usable?
@@ -23,7 +22,8 @@ Libraries:
 - When installed on a system where it was not compiled & an attempt is made to start it, sbbs
   cannot find the libsbbs.so library file, which is installed in /usr/lib/synchronet.
 - Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
-  Can that be defined at compile time? (search keywords RPATH, disable-rpath)
+  Can that be defined at compile time? (search keywords RPATH, disable-rpath)  They could be
+  deleted/changed using chrpath cmd before building the package...
 - "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
   following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
   That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
@@ -37,7 +37,6 @@ Libraries:
 
 Configuration:
 - node directorys need to be at the base of the sbbs dir? rather than in the data dir?
-- Either install something to /etc/synchronet or put it in debian/dirs
 - Create & use debian/po, so that debconf messages can be translated.
 - ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/synchronet.
   Add debconf questions about if to copy to runtime directory, & if so to where? /srv/sbbs?
@@ -49,4 +48,4 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Thu,  22 Mar 2008 18:47 -0400
+ -- Robert James Clay <jame@rocasa.org>  Thu,  30 Mar 2008 21:53 -0400
