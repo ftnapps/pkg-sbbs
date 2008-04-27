@@ -5,7 +5,6 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
-
 CFLAGS = -Wall -g
 
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
@@ -13,6 +12,9 @@ ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
 else
 	CFLAGS += -O2
 endif
+
+# Set SBBSDIR to base installation directory.
+export SBBSDIR=/opt/synchronet
 
 configure: configure-stamp
 configure-stamp:
