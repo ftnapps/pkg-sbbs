@@ -1,0 +1,6 @@
+var/opt/synchronet/data opt/synchronet/data
+var/opt/synchronet/node1 opt/synchronet/node1
+var/opt/synchronet/node2 opt/synchronet/node2
+var/opt/synchronet/node3 opt/synchronet/node3
+var/opt/synchronet/node4 opt/synchronet/node4
+usr/share/doc/synchronet opt/synchronet/doc
