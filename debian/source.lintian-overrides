@@ -1,0 +1,4 @@
+# debian/source.lintian-overrides for Synchronet
+#
+synchronet source: dir-or-file-in-opt
+
