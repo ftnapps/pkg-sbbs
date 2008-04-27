@@ -1,19 +1,17 @@
 Debian TODO for Synchronet
 
 Packaging:
-- Install exec/* to /usr/share/synchronet/exec. (will also need to update README.Debian, etc.)
 - Find better way of passing the results of uname -m to the dh_install lines in debian/rules;
   tried defining a variable but couldn't get that to work.  Define it completely outside of 
   the target rule?
 - Create man pages for executables. (see if can do some from existing docs?)
 - debian/control:  Description - Add a note about the BBS shells that it can
   emulate?  Add note about scripting languages available/usable?
-- separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
+- Separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
   allow for separate packaging for any similar extensions, but would also need a defined or 
   findable exec/xtrn directory.
-- separate packaging for web templates? 
-- At least for package purge;  delete /usr/lib/synchronet/*bin
-- Add reminder that even a package purge will not remove the runtime directorys that may be set up.
+- Separate packaging for web templates? 
+- At least for package purge;  delete /opt/synchronet/exec/*bin ?
 - Create a synchronet-dbg package?   (Check references.)  
 - Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
 - The Java Telnet Applet (jta) is already a standard packaage in Debian:  investigate the use
@@ -21,7 +19,7 @@ Packaging:
 
 Libraries:
 - When installed on a system where it was not compiled & an attempt is made to start it, sbbs
-  cannot find the libsbbs.so library file, which is installed in /usr/lib/synchronet.
+  cannot find the libsbbs.so library file, which is installed in /opt/synchronet/exec.
 - Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
   Can that be defined at compile time? (search keywords RPATH, disable-rpath)  They could be
   deleted/changed using chrpath cmd before building the package...
@@ -38,10 +36,9 @@ Libraries:
 
 Configuration:
 - Names for user:group?  sbbs:sbbs? synchronet:sbbs  ?   
-- node directorys need to be at the base of the sbbs dir? rather than in the data dir?
 - Create & use debian/po, so that debconf messages can be translated.
 - ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/synchronet.
-  Add debconf questions about if to copy to runtime directory, & if so to where? /srv/sbbs?
+  Add debconf questions about if to copy to runtime directory instead of manually setting it?
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
   hostname and sysop info (like system password) 
   ports or services that you want to run. 
@@ -50,4 +47,4 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Thu,  16 Apr 2008 22:02 -0400
+ -- Robert James Clay <jame@rocasa.org>  Sat,  26 Apr 2008 23:42 -0400
