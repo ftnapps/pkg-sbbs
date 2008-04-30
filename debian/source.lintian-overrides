@@ -1,4 +1,8 @@
 # debian/source.lintian-overrides for Synchronet
-#
+
+#    Per upstream:
+# Synchronet is better suited to a /opt install.
+# A huge number of things use relative paths and those paths are almost always
+# relative to ctrl.  A fairly major scrub to replace those would be required.
 synchronet source: dir-or-file-in-opt
 
