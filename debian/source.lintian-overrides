@@ -6,3 +6,7 @@
 # relative to ctrl.  A fairly major scrub to replace those would be required.
 synchronet source: dir-or-file-in-opt
 
+# mods/ is a standard directory but is distributed empty because it is 
+# only intended for use by the administrator of the system.
+synchronet source: package-contains-empty-directory opt/synchronet/mods/
+
