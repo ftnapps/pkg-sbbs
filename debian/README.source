@@ -1,30 +1,32 @@
-    Createing a source archive for Synchronet release 3.15a, from CVS as of 20080211
+    Createing a source archive for Synchronet release 3.14a.
     
-Note that this version of the procedure uses the pre-compiled library file for cryptlib.
+Note that this version of the package uses the pre-compiled library file for cryptlib
+provided in the upstream sources.
 
-    
-cd /path/to/working/directory
+    # Create working directory named synchronet_3.14a-0.1, then change to that directory.
+cd /path/to/working/directory/synchronet_3.14a-0.1
 
-    # Downloaded sbbs_src.tgz on 11 February 2008, for CVS as of 20080211.
+    # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
 
-    # Extract contents of source archive to working directory. Can then
+    # Extract contents of upstream source archive to working directory. Can then
     # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
-
-    # Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
+    # Can also now move the archive ssrc314a.tgz out of the working directory.
+mv ssrc314a.tgz ..
+    
+    # Instead of being a symbolic link the file libcl.so to the file libcl.so.3.3.0, it is 
+    # a copy of it.  Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
 cd lib/cryptlib/linux.release
 ln -s libcl.so.3.3.0 libcl.so
-    # this is needed for the package build (needs to be redone if doing multiple builds)
-ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
+    # This is needed for the package build (needs to be redone if doing multiple builds),
+    # if doing the package elsewhere from where the source archive was built, do it there.
+    # ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
 
     # Get the required modules for running synchronet.  Exclude docs/js/guide &
     # docs/js/ref or delete afterwards if needed to save space.
-    cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -D 20080211 run-sbbs3 
+cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
     # Also exclude or delete afterwards the directory web/root/telnet/tools.
     # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
     
-    # Copy debian directory to working directory
+    # Create the source archive from the working directory. 
+
     
-    # Update debian/changelog as neccessary.		
-    
-    # To just build a binary package, where "name@example.org" is your email address.
-debuild --no-lintian -rfakeroot -ename@example.org  -us -uc -b
