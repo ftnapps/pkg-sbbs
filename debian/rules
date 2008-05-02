@@ -62,18 +62,17 @@ install: build
 	dh_installdirs
 
 	# Add here commands to install the package into debian/synchronet.
-	#HW := $(shell uname -m) && echo "HW =" $$HW
-	dh_install src/conio/gcc.linux.$(shell uname -m).lib.debug/libciolib_mt.a /opt/synchronet/exec
-	dh_install src/smblib/gcc.linux.$(shell uname -m).lib.debug/libsmb.a /opt/synchronet/exec
-	dh_install src/uifc/gcc.linux.$(shell uname -m).lib.debug/libuifc_mt.a /opt/synchronet/exec
-	dh_install src/xpdev/gcc.linux.$(shell uname -m).lib.debug/libxpdev* /opt/synchronet/exec
-	dh_install src/sbbs3/gcc.linux.$(shell uname -m).lib.debug/lib* /opt/synchronet/exec
-	dh_install src/sbbs3/gcc.linux.$(shell uname -m).exe.debug/* /opt/synchronet/exec
-	dh_install src/sbbs3/scfg/gcc.linux.$(shell uname -m).exe.debug/scfg* /opt/synchronet/exec
-#	dh_install src/sbbs3/menuedit/gcc.linux.$(shell uname -m).exe.debug/menuedit /opt/synchronet/exec
-	dh_install src/sbbs3/syncview/gcc.linux.$(shell uname -m).exe.debug/syncview /opt/synchronet/exec
-	dh_install src/sbbs3/uedit/gcc.linux.$(shell uname -m).exe.debug/uedit /opt/synchronet/exec
-	dh_install src/sbbs3/umonitor/gcc.linux.$(shell uname -m).exe.debug/umonitor /opt/synchronet/exec
+	dh_install src/conio/gcc.linux.lib.debug/libciolib_mt.a /opt/synchronet/exec
+	dh_install src/smblib/gcc.linux.lib.debug/libsmb.a /opt/synchronet/exec
+	dh_install src/uifc/gcc.linux.lib.debug/libuifc_mt.a /opt/synchronet/exec
+	dh_install src/xpdev/gcc.linux.lib.debug/libxpdev* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.lib.debug/lib* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.exe.debug/* /opt/synchronet/exec
+	dh_install src/sbbs3/scfg/gcc.linux.exe.debug/scfg* /opt/synchronet/exec
+#	dh_install src/sbbs3/menuedit/gcc.linux.exe.debug/menuedit /opt/synchronet/exec
+	dh_install src/sbbs3/syncview/gcc.linux.exe.debug/syncview /opt/synchronet/exec
+	dh_install src/sbbs3/uedit/gcc.linux.exe.debug/uedit /opt/synchronet/exec
+	dh_install src/sbbs3/umonitor/gcc.linux.exe.debug/umonitor /opt/synchronet/exec
 
 
 # Build architecture-independent files here.
