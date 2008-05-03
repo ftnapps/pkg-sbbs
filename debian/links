@@ -1,4 +1,4 @@
-etc/opt/synchronet opt/synchronet/ctrl
+opt/synchronet/ctrl etc/opt/synchronet
 var/opt/synchronet/data opt/synchronet/data
 var/opt/synchronet/node1 opt/synchronet/node1
 var/opt/synchronet/node2 opt/synchronet/node2
