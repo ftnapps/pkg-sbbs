@@ -2,7 +2,6 @@
 /opt/synchronet/ctrl/attr.cfg
 /opt/synchronet/ctrl/cgi_env.ini
 /opt/synchronet/ctrl/chat.cnf
-/opt/synchronet/ctrl/conffiles
 /opt/synchronet/ctrl/dns_blacklist.cfg
 /opt/synchronet/ctrl/dnsbl_exempt.cfg
 /opt/synchronet/ctrl/domains.cfg
