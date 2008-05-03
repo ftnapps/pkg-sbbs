@@ -26,6 +26,8 @@ ln -s libcl.so.3.3.0 libcl.so
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
     # Also exclude or delete afterwards the directory web/root/telnet/tools.
     # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
+    # Correct the file permissions on the file ircd.conf
+chmod 644 ctrl/ircd.conf
     
     # Create the source archive from the working directory. 
 
