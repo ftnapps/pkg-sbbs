@@ -4,12 +4,11 @@ Synchronet for Debian
 Manual setup for running Synchronet
 -----------------------------------
 
-1) Copy /usr/share/synchronet/ctrl to /opt/synchronet/ctrl
-2) Copy (or create a symbolic link from) /usr/share/synchronet/text to /opt/synchronet/text
-3) Copy (or create a symbolic link from) /usr/share/synchronet/web to /opt/synchronet/web
-4) Configure Synchronet as desired, running scfg & editing ctrl/* as neccessary
-5) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
-6) As root, or using sudo, run /etc/init.d/sychronet start
+1) Copy (or create a symbolic link from) /usr/share/synchronet/text to /opt/synchronet/text
+2) Copy (or create a symbolic link from) /usr/share/synchronet/web to /opt/synchronet/web
+3) Configure Synchronet as desired, running scfg & editing ctrl/* as neccessary
+4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
+5) As root, or using sudo, run /etc/init.d/sychronet start
 
 
 Directories
@@ -25,7 +24,7 @@ xtrn/*	/opt/synchronet/xtrn
     is a symlink to it.
     
     Synchronet ctrl, text, web, & data content are installed/updated as follows:
-ctrl/*  /usr/share/synchronet/ctrl 
+ctrl/*  /opt/synchronet/ctrl 
 text/*  /usr/share/synchronet/text
 web/*   /usr/share/synchronet/web
 data/*	/var/opt/synchronet
@@ -43,4 +42,4 @@ doc/*	/usr/share/doc/synchronet  (except docs/js)
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet source archve was put together.
 
- -- Robert James Clay <jame@rocasa.org>  Fri,   3 May 2008 09:35 -0400
+ -- Robert James Clay <jame@rocasa.org>  Fri,   3 May 2008 14:49 -0400

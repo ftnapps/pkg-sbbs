@@ -1,4 +1,4 @@
-ctrl/*	usr/share/synchronet/ctrl
+ctrl/*	opt/synchronet/ctrl
 docs/_borders/*	usr/share/doc/synchronet/_borders
 docs/images/*	usr/share/doc/synchronet/images
 exec/*	opt/synchronet/exec

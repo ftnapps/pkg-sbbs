@@ -10,9 +10,9 @@
 # in order for it to start at bootup.
 SBBS_ENABLE=No
 
-# SBBSCTRL should be set to the directory where the sbbs.ini file is
-# located.  Defaults to /sbbs/ctrl.
-export SBBSCTRL=/srv/sbbs/ctrl
+# SBBSCTRL should be set to the directory where the sbbs.ini file
+# is located.  
+export SBBSCTRL=/opt/synchronet/ctrl
 
 # Additional options that are passed to the Daemon.
 DAEMON_ARGS=""
