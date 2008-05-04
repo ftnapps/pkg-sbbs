@@ -73,7 +73,8 @@ install: build
 	dh_install src/sbbs3/syncview/gcc.linux.exe.debug/syncview /opt/synchronet/exec
 	dh_install src/sbbs3/uedit/gcc.linux.exe.debug/uedit /opt/synchronet/exec
 	dh_install src/sbbs3/umonitor/gcc.linux.exe.debug/umonitor /opt/synchronet/exec
-
+	# Lintian overrides file
+	install -c -m 444 debian/synchronet.lintian-overrides debian/synchronet/usr/share/lintian/overrides/synchronet
 
 # Build architecture-independent files here.
 binary-indep: build install
