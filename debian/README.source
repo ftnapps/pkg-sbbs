@@ -28,6 +28,8 @@ cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-s
     # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
     # Correct the file permissions on the file ircd.conf
 chmod 644 ctrl/ircd.conf
+    # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
+chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
     
     # Create the source archive from the working directory. 
 
