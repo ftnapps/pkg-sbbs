@@ -32,7 +32,6 @@ build-stamp: configure-stamp
 	# Add here commands to compile the package.
 	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIB=mozjs USE_DOSEMU=1
 	$(MAKE) -C src/sbbs3/scfg DEBUG=1
-#	$(MAKE) -C src/sbbs3/menuedit	
 	$(MAKE) -C src/sbbs3/syncview
 	$(MAKE) -C src/sbbs3/umonitor
 	$(MAKE) -C src/sbbs3/uedit
@@ -48,7 +47,6 @@ clean:
 	# Add here commands to clean up after the build process.
 	-$(MAKE) -C src/sbbs3 clean
 	-$(MAKE) -C src/sbbs3/scfg clean
-#	-$(MAKE) -C src/sbbs3/menuedit clean
 	-$(MAKE) -C src/sbbs3/syncview clean
 	-$(MAKE) -C src/sbbs3/umonitor clean
 	-$(MAKE) -C src/sbbs3/uedit clean
@@ -69,7 +67,6 @@ install: build
 	dh_install src/sbbs3/gcc.linux.lib.debug/lib* /opt/synchronet/exec
 	dh_install src/sbbs3/gcc.linux.exe.debug/* /opt/synchronet/exec
 	dh_install src/sbbs3/scfg/gcc.linux.exe.debug/scfg* /opt/synchronet/exec
-#	dh_install src/sbbs3/menuedit/gcc.linux.exe.debug/menuedit /opt/synchronet/exec
 	dh_install src/sbbs3/syncview/gcc.linux.exe.debug/syncview /opt/synchronet/exec
 	dh_install src/sbbs3/uedit/gcc.linux.exe.debug/uedit /opt/synchronet/exec
 	dh_install src/sbbs3/umonitor/gcc.linux.exe.debug/umonitor /opt/synchronet/exec
