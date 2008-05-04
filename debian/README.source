@@ -8,13 +8,15 @@ cd /path/to/working/directory/synchronet_3.14a-0.1
 
     # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
 
-    # Extract contents of upstream source archive to working directory. Can then
+    # Extract contents of upstream source archive to working directory.  Can then
     # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
+    # Delete src/sbbs3/menuedit (Per author, menuedit is not a currently maintained project.)
+rmdir --ignore-fail-on-non-empty src/sbbs3/menuedit
     # Can also now move the archive ssrc314a.tgz out of the working directory.
 mv ssrc314a.tgz ..
     
-    # Instead of being a symbolic link the file libcl.so to the file libcl.so.3.3.0, it is 
-    # a copy of it.  Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
+    # Instead of being a symbolic link, the file libcl.so is a full copy of the file
+    # libcl.so.3.3.0.  Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
 cd lib/cryptlib/linux.release
 ln -s libcl.so.3.3.0 libcl.so
     # This is needed for the package build (needs to be redone if doing multiple builds),
@@ -25,7 +27,6 @@ ln -s libcl.so.3.3.0 libcl.so
     # docs/js/ref or delete afterwards if needed to save space.
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
     # Also exclude or delete afterwards the directory web/root/telnet/tools.
-    # Delete src/sbbs3/menuedit (Per author, menuedit is not a currently maintained project.)
     # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
     # Correct the file permissions on the file ircd.conf
 chmod 644 ctrl/ircd.conf
