@@ -6,6 +6,7 @@ opt/synchronet/mods
 opt/synchronet/xtrn
 opt/synchronet/xtrn/sbj
 opt/synchronet/xtrn/sbl
+usr/share/lintian/overrides
 var/opt/synchronet
 var/opt/synchronet/data
 var/opt/synchronet/data/dirs
