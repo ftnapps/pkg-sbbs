@@ -1,5 +1,5 @@
 Source: synchronet
-Section: comm
+Section: non-free/net
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.org>
 Build-Depends: debhelper (>= 5), libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev
