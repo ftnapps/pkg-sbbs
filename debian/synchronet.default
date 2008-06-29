@@ -14,5 +14,5 @@ SBBS_ENABLE=No
 # is located.  
 export SBBSCTRL=/opt/synchronet/ctrl
 
-# Additional options that are passed to the Daemon.
-DAEMON_ARGS=""
+# Options that are passed to the Daemon.
+DAEMON_ARGS=$SBBSCTRL
