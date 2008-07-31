@@ -38,6 +38,9 @@ chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
     # instances of it on that line.  Those setup a more correct rpath in 
     # the executables than that set by a regular compile & install.
     
+    # Remove lines 948, 949, & 950 from the file src/sbbs3/sbbs.h;  this prevents a 
+    # "previous declaration" error when compiling using "JSINCLUDE=/usr/include/mozjs".
+    
     # Create the source archive from the working directory. 
 
     
