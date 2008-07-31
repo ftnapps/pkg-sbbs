@@ -32,6 +32,11 @@ cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-s
 chmod 644 ctrl/ircd.conf
     # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
 chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
+
+    # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
+    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other four
+    # instances of it on that line.  Those setup a more correct rpath in 
+    # the executables than that set by a regular compile & install.
     
     # Create the source archive from the working directory. 
 
