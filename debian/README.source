@@ -34,7 +34,7 @@ chmod 644 ctrl/ircd.conf
 chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
 
     # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
-    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other four
+    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other three
     # instances of it on that line.  Those setup a more correct rpath in 
     # the executables than that set by a regular compile & install.
     
