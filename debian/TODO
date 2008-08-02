@@ -1,35 +1,38 @@
 Debian TODO for Synchronet
 
 Packaging:
-- Find better way of passing the results of uname -m to the dh_install lines in debian/rules;
-  tried defining a variable but couldn't get that to work.  Define it completely outside of 
-  the target rule?
-- Even if the actual build is using the files from the dev packages for libnspr4 & libmozjs,
-  the rpath is getting set to the ones from the build system instead of where the libararies
-  are actually installed on a Debian system.  Set the library paths, per the syncunix.txt doc.
+- "TempDirectory" (in sbbs.ini) is not set by default but "Synchronet assumes it is
+  the only user of the directory".  Install directory.  Provide in example sbbs.ini. 
 - Add a call to the baja makefile in exec into the postinst script?
+- At least for package purge;  delete /opt/synchronet/exec/*bin ?
 - Create man pages for executables. (see if can do some from existing docs?)
 - debian/control:  Description - Add a note about the BBS shells that it can
   emulate?  Add note about scripting languages available/usable?
+- Warnings by package checker (lintian) about RPATH setting in binaries?  If still
+  present, add to overrides.
 - Separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
   allow for separate packaging for any similar extensions.
 - Separate packaging for web templates, like for sbbs apps? 
-- At least for package purge;  delete /opt/synchronet/exec/*bin ?
 - Create a synchronet-dbg package?   (Check references.)  
 - Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
 - The Java Telnet Applet (jta) is already a standard packaage in Debian:  investigate the use
   of that version of jta, instead of the version that is distributed with synchronet.  
+- Debian ITP # 418776, after resolve non-free zmodem issue?
+
+Configuration:
+- Synchronet user:group - sbbs:sbbs  Configure automatically at installation.   
+- If ~/text & ~/web are not present, automatically copy from installation directory.
+- Prompting for some initial configuration options at installation ? (from Ragnarok)
+  hostname and sysop info (like system password), ports or services that you want to run,
+  dove-net setup?, bbs services start at system startup?  Anything that is configurable
+  in the *.ini files could possibly be updated using a program.  (Perl script?)
+- Create & use debian/po, so that debconf messages can be translated.
 
 Libraries:
-- When installed on a system where it was not compiled & an attempt is made to start it, sbbs
-  cannot find the libsbbs.so library file, which is installed in /opt/synchronet/exec.
-- Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
-  Can that be defined at compile time? (search keywords RPATH, disable-rpath)  They could be
-  deleted/changed using chrpath cmd before building the package...
 - "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
   following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
   That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
-  to expect a version number in a particular format as part of the name. 
+  to expect a version number in a particular format as part of the name.  Add versioned links? 
 - Add usage of libsdl?  (libsdl1.2-dev, libsdl1.2debian-all?)
 - Add source compilation of cryptlib, instead of using precompiled library.  Need
   this both for being able to do non i386 packages as well as just being neccessary
@@ -37,17 +40,6 @@ Libraries:
   would enable it to be used for syncterm, although there could also be a
   synchronet-common package to handle that.
 
-Configuration:
-- Names for Synchronet user:group?  sbbs:sbbs? synchronet:sbbs  ?   
-- Create & use debian/po, so that debconf messages can be translated.
-- ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/synchronet.
-  Add debconf questions about if to copy to runtime directory instead of manually setting it?
-- Prompting for some initial configuration options at installation ? (from Ragnarok)
-  hostname and sysop info (like system password) 
-  ports or services that you want to run. 
-  dove-net setup?
-  bbs services start at system startup?
-
 
  
- -- Robert James Clay <jame@rocasa.org>  Sat,   1 May 2008 17:11 -0400
+ -- Robert James Clay <jame@rocasa.org>  Sat,   2 Aug 2008 19:30 -0400
