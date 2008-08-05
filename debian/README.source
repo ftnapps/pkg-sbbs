@@ -17,9 +17,12 @@ rmdir --ignore-fail-on-non-empty src/sbbs3/menuedit
 mv ssrc314a.tgz ..
     
     # Instead of being a symbolic link, the file libcl.so is a full copy of the file
-    # libcl.so.3.3.0.  Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
+    # libcl.so.3.3.0.  Remove libcl.so.  Create symbolic links from from libcl.so.3.3.0
+    # to libcl.so & libcl.so.3.3.0.
 cd lib/cryptlib/linux.release
+rm -f libcl.so
 ln -s libcl.so.3.3.0 libcl.so
+ln -s libcl.so.3.3.0 libcl.so.3
     # This is needed for the package build (needs to be redone if doing multiple builds),
     # if doing the package elsewhere from where the source archive was built, do it there.
     # ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
