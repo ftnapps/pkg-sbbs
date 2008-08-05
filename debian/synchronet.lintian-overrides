@@ -11,3 +11,7 @@ synchronet: file-in-unusual-dir
 # only intended for use by the administrator of the system.
 synchronet: package-contains-empty-directory opt/synchronet/mods/
 
+# jsexec is provided by the synchronet package and is not currently 
+# available otherwise;  override the lintian error.
+unusual-interpreter ./opt/synchronet/exec/gnats_cvs.js #!/opt/synchronet/exec/jsexec
+unusual-interpreter ./opt/synchronet/exec/sendmail.js #!/opt/synchronet/exec/jsexec
