@@ -9,7 +9,7 @@ cd /path/to/working/directory/synchronet_3.14a-0.1
     # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
 
     # Extract contents of upstream source archive to working directory.  Can then
-    # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
+    # delete include/microsoft, include/mozilla, include/sdl, lib/mozilla;  they are not needed.
     # Delete src/sbbs3/menuedit (Per author, menuedit is not a currently maintained project.)
 rmdir --ignore-fail-on-non-empty src/sbbs3/menuedit
     # Can also now move the archive ssrc314a.tgz out of the working directory.
