@@ -32,7 +32,9 @@ cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-s
 chmod 644 ctrl/ircd.conf
     # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
 chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
-
+    # Correct the first lines of the files exec/gnats_cvs.js and exec/sendmail.js to 
+    # as follows:  "#!/opt/synchronet/exec/jsexec -x -c /opt/synchronet/ctrl"
+    
     # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
     # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other three
     # instances of it on that line.  Those setup a more correct rpath in 
