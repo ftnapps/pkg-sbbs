@@ -1,4 +1,14 @@
 opt/synchronet/ctrl etc/opt/synchronet
+opt/synchronet/exec/libftpsrvr.so opt/synchronet/exec/libftpsrvr.so.3
+opt/synchronet/exec/libmailsrvr.so opt/synchronet/exec/libmailsrvr.so.3
+opt/synchronet/exec/libsbbs.so opt/synchronet/exec/libsbbs.so.3
+opt/synchronet/exec/libservices.so opt/synchronet/exec/libservices.so.3
+opt/synchronet/exec/libwebsrvr.so opt/synchronet/exec/libwebsrvr.so.3
+opt/synchronet/exec/libftpsrvr.so opt/synchronet/exec/libftpsrvr.so.3.14
+opt/synchronet/exec/libmailsrvr.so opt/synchronet/exec/libmailsrvr.so.3.14
+opt/synchronet/exec/libsbbs.so opt/synchronet/exec/libsbbs.so.3.14
+opt/synchronet/exec/libservices.so opt/synchronet/exec/libservices.so.3.14
+opt/synchronet/exec/libwebsrvr.so opt/synchronet/exec/libwebsrvr.so.3.14
 var/opt/synchronet/data opt/synchronet/data
 var/opt/synchronet/node1 opt/synchronet/node1
 var/opt/synchronet/node2 opt/synchronet/node2
