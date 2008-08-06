@@ -86,7 +86,7 @@ binary-arch: build install
 	dh_installexamples
 	dh_install
 	dh_installinit
-	dh_installman
+	dh_installman debian/synchronet.1
 	dh_link
 	dh_strip
 	dh_compress
