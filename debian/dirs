@@ -3,6 +3,7 @@ opt/synchronet/ctrl
 opt/synchronet/exec
 opt/synchronet/exec/tone
 opt/synchronet/mods
+opt/synchronet/temp
 opt/synchronet/xtrn
 opt/synchronet/xtrn/sbj
 opt/synchronet/xtrn/sbl
