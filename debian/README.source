@@ -17,8 +17,8 @@ rmdir --ignore-fail-on-non-empty src/sbbs3/menuedit
 mv ssrc314a.tgz ..
     
     # Instead of being a symbolic link, the file libcl.so is a full copy of the file
-    # libcl.so.3.3.0.  Remove libcl.so.  Create symbolic links from from libcl.so.3.3.0
-    # to libcl.so & libcl.so.3.3.0.
+    # libcl.so.3.3.0.  Remove libcl.so.  Create symbolic links from libcl.so.3.3.0
+    # to libcl.so & libcl.so.3.
 cd lib/cryptlib/linux.release
 rm -f libcl.so
 ln -s libcl.so.3.3.0 libcl.so
