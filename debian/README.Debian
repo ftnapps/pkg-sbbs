@@ -1,14 +1,14 @@
 Synchronet for Debian
 ======================
 
-Manual setup for running Synchronet
------------------------------------
+Initial manual setup for running Synchronet
+-------------------------------------------
 
 1) Copy (or create a symbolic link from) /usr/share/synchronet/text to /opt/synchronet/text
 2) Copy (or create a symbolic link from) /usr/share/synchronet/web to /opt/synchronet/web
 3) Configure Synchronet as desired, running scfg & editing ctrl/* as necessary
 4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
-5) As root, or using sudo, run /etc/init.d/sychronet start
+5) As root, or using sudo, run /etc/init.d/synchronet start
 
 
 Directories
@@ -16,7 +16,7 @@ Directories
 
     Synchronet (SBBS) directories are installed as follows:
 
-    Synchronet executables and libraries
+    Synchronet executables and libraries:
 exec/*	/opt/synchronet/exec
 xtrn/*	/opt/synchronet/xtrn
 
@@ -39,7 +39,13 @@ doc/*	/usr/share/doc/synchronet  (except docs/js)
     A /var/spool/sbbs directory is created, and is used by the example Debian
     binkd.cfg file.
 
+
+Other
+-----
+
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet source archve was put together.
 
- -- Robert James Clay <jame@rocasa.org>  Fri,   3 May 2008 14:49 -0400
+
+
+ -- Robert James Clay <jame@rocasa.org>  Sun,  21 Sep 2008 12:11 -0400
