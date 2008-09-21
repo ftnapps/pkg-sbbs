@@ -27,6 +27,18 @@ ln -s libcl.so.3.3.0 libcl.so.3
     # if doing the package elsewhere from where the source archive was built, do it there.
     # ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
 
+    # The executables for sbj, sbl, & tpd that come with the source archive are actually only scripts
+    # that attempt to locate the real excecutables in a build directory, which is not needed for
+    # the debian package.   Remove them from the source archive for the debian package.
+rm -f xtrn/sbj/sbj
+rm -f xtrn/sbj/sbjclean
+rm -f xtrn/sbl/sbl
+rm -f xtrn/sbl/sbl2smb
+rm -f xtrn/sbl/sblpack
+rm -f xtrn/sbl/smb2sbl
+rm -f xtrn/tbd/reroll
+rm -f xtrn/tbd/tbd
+
     # Get the required modules for running synchronet.  Exclude docs/js/guide &
     # docs/js/ref or delete afterwards if needed to save space.
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
