@@ -6,9 +6,10 @@ Initial manual setup for running Synchronet
 
 1) Copy (or create a symbolic link from) /usr/share/synchronet/text to /opt/synchronet/text
 2) Copy (or create a symbolic link from) /usr/share/synchronet/web to /opt/synchronet/web
-3) Configure Synchronet as desired, running scfg & editing ctrl/* as necessary
-4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
-5) As root, or using sudo, run /etc/init.d/synchronet start
+3) Copy /usr/share/synchronet/ctrl to /opt/synchronet/ctrl
+4) Configure Synchronet as desired, running scfg & editing ctrl/* as necessary
+5) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
+6) As root, or using sudo, run /etc/init.d/synchronet start
 
 
 Directories
