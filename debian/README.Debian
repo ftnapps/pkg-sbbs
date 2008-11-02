@@ -19,11 +19,11 @@ Directories
     Synchronet (SBBS) content directories are installed as follows:
 
     Synchronet executables and libraries
-exec/*	/opt/sbbscvs
+exec/*	/opt/sbbscvs/exec
 xtrn/*	/opt/sbbscvs/xtrn
 
     Cryptlib library file libcl.so.3.3.0 is installed to /usr/lib, and libcl.so
-    is a symlink to it.
+    and libcl.so.3 are symlinks to it.
     
     Synchronet ctrl, text, & web content are installed/updated as follows:
 ctrl/*  /usr/share/sbbscvs/ctrl 
@@ -40,10 +40,10 @@ doc/*	/usr/share/doc/sbbscvs  (except docs/js)
     Example Debian ini/cfg files are installed to /usr/share/doc/sbbscvs/examples.
     Also, doc-base is used to register the docs index.htm file
 
-    A /var/spool/sbbs directory is created, and is used by the example Debian
+    A /var/spool/sbbscvs directory is created, and is used by the example Debian
     binkd.cfg file.
 
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet CVS source archve was put together.
 
- -- Robert James Clay <jame@rocasa.org>  Sat,  23 Aug 2008 09:38 -0400
+ -- Robert James Clay <jame@rocasa.org>  Sat,  2 Nov 2008 08:52 -0500
