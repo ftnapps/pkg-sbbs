@@ -2,15 +2,16 @@ Synchronet for Debian
 ======================
 
 
-Manual setup for running Synchronet
------------------------------------
+Initial Manual setup for running Synchronet
+-------------------------------------------
 
 1) Copy /usr/share/sbbscvs/ctrl to /opt/sbbscvs/ctrl
-2) Copy (or create a symbolic link) /usr/share/sbbscvs/text to /opt/sbbscvs/text
-3) Copy /usr/share/sbbscvs/web to /opt/sbbscvs/web
-4) Configure Synchronet as desired, running scfg & editing ctrl/* as neccessary
-5) Change the SBBS_ENABLE setting to Yes in /etc/default/sbbscvs
-6) As root, or using sudo, run /etc/init.d/sychronet start
+2) Copy /usr/share/sbbscvs/data to /opt/sbbscvs/data
+3) Copy (or create a symbolic link) /usr/share/sbbscvs/text to /opt/sbbscvs/text
+4) Copy /usr/share/sbbscvs/web to /opt/sbbscvs/web
+5) Configure Synchronet as desired, running scfg & editing ctrl/* as neccessary
+6) Change the SBBS_ENABLE setting to Yes in /etc/default/sbbscvs
+7) As root, or using sudo, run /etc/init.d/sychronet start
 
 
 Directories
@@ -46,4 +47,4 @@ doc/*	/usr/share/doc/sbbscvs  (except docs/js)
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet CVS source archve was put together.
 
- -- Robert James Clay <jame@rocasa.org>  Sat,  2 Nov 2008 08:52 -0500
+ -- Robert James Clay <jame@rocasa.org>  Sun,  2 Nov 2008 09:59 -0500
