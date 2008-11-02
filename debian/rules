@@ -1,0 +1,102 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# sbbscvs package debian/rules.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+# Set SBBSDIR to base installation directory.
+export SBBSDIR=/opt/sbbscvs
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	# Add here commands to configure the package.
+
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+
+	# Add here commands to compile the package.
+	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIB=mozjs JSLIBDIR=/usr/lib NSPRINCLUDE=/usr/include/nspr NSPRDIR=/usr/lib CRYPTLIBDIR=/usr/lib USE_DOSEMU=1
+	$(MAKE) -C src/sbbs3/scfg DEBUG=1
+	$(MAKE) -C src/sbbs3/syncview
+	$(MAKE) -C src/sbbs3/umonitor
+	$(MAKE) -C src/sbbs3/uedit
+	#
+
+	touch $@
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	# Add here commands to clean up after the build process.
+	-$(MAKE) -C src/sbbs3 clean
+	-$(MAKE) -C src/sbbs3/scfg clean
+	-$(MAKE) -C src/sbbs3/syncview clean
+	-$(MAKE) -C src/sbbs3/umonitor clean
+	-$(MAKE) -C src/sbbs3/uedit clean
+
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k 
+	dh_installdirs
+
+	# Add here commands to install the package into debian/sbbscvs.
+	#HW := $(shell uname -m) && echo "HW =" $$HW
+	dh_install src/conio/gcc.linux.$(shell uname -m).lib.debug/libciolib_mt.a /opt/sbbscvs/exec
+	dh_install src/smblib/gcc.linux.$(shell uname -m).lib.debug/libsmb.a /opt/sbbscvs/exec
+	dh_install src/uifc/gcc.linux.$(shell uname -m).lib.debug/libuifc_mt.a /opt/sbbscvs/exec
+	dh_install src/xpdev/gcc.linux.$(shell uname -m).lib.debug/libxpdev* /opt/sbbscvs/exec
+	dh_install src/sbbs3/gcc.linux.$(shell uname -m).lib.debug/lib* /opt/sbbscvs/exec
+	dh_install src/sbbs3/gcc.linux.$(shell uname -m).exe.debug/* /opt/sbbscvs/exec
+	dh_install src/sbbs3/scfg/gcc.linux.$(shell uname -m).exe.debug/scfg* /opt/sbbscvs/exec
+	dh_install src/sbbs3/syncview/gcc.linux.$(shell uname -m).exe.debug/syncview /opt/sbbscvs/exec
+	dh_install src/sbbs3/uedit/gcc.linux.$(shell uname -m).exe.debug/uedit /opt/sbbscvs/exec
+	dh_install src/sbbs3/umonitor/gcc.linux.$(shell uname -m).exe.debug/umonitor /opt/sbbscvs/exec
+
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+	dh_install
+	dh_installinit
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure

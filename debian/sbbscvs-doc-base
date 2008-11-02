@@ -1,0 +1,12 @@
+Document: sbbscvs
+Title: Synchronet BBS from CVS
+Author: Rob Swindell
+Abstract: This documentation describes what Synchronet BBS
+ from CVS is and other information associated with it.
+Section: Network/Communication
+
+Format: HTML
+Index: /usr/share/doc/sbbscvs/index.htm
+Files: /usr/share/doc/sbbscvs/*.html
+
+  

@@ -1,0 +1,2 @@
+?package(sbbscvs):needs="X11" section="Applications/System/Administration"\
+  title="sbbscvs Configuration" command="/opt/sbbscvs/exec/scfg /opt/sbbscvs/ctrl -iX"

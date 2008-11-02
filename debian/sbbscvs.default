@@ -1,0 +1,19 @@
+# Defaults for sbbscvs initscript
+# sourced by /etc/init.d/sbbscvs
+# installed at /etc/default/sbbscvs by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Run sbbscvs at startup ? Set to "Yes" after configuring sbbscvs
+# in order for it to start at bootup.
+SBBS_ENABLE=No
+
+# SBBSCTRL should be set to the directory where the sbbs.ini file is
+# located.  Defaults to /sbbs/ctrl.
+export SBBSCTRL=/opt/sbbscvs/ctrl
+
+# Additional options that are passed to the Daemon.
+DAEMON_ARGS=$SBBSCTRL
+

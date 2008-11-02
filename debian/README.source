@@ -1,0 +1,31 @@
+    Createing a source archive for Synchronet release 3.15a, from CVS as of 20080211
+    
+Note that this version of the procedure uses the pre-compiled library file for cryptlib.
+
+    
+cd /path/to/working/directory
+
+    # Downloaded sbbs_src.tgz on 11 February 2008, for CVS as of 20080211.
+
+    # Extract contents of source archive to working directory. Can then
+    # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
+    # Delete src/sbbs3/menuedit;  per author, it is not a currently maintained project.
+    
+    # Replace libcl.so with a symlink from libcl.so to libcl.so.3.3.0 
+cd lib/cryptlib/linux.release
+ln -s libcl.so.3.3.0 libcl.so
+    # this is needed for the package build (needs to be redone if doing multiple builds)
+ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
+
+    # Get the required modules for running synchronet.  Exclude docs/js/guide &
+    # docs/js/ref or delete afterwards if needed to save space.
+    cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -D 20080211 run-sbbs3 
+    # Also exclude or delete afterwards the directory web/root/telnet/tools.
+    # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
+    
+    # Copy debian directory to working directory
+    
+    # Update debian/changelog as neccessary.		
+    
+    # To just build a binary package, where "name@example.org" is your email address.
+debuild --no-lintian -rfakeroot -ename@example.org  -us -uc -b
