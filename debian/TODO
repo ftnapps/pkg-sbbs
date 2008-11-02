@@ -40,7 +40,7 @@ Libraries:
 Configuration:
 - Names for sbbscvs user:group?  sbbscvs:sbbs?   
 - Create & use debian/po, so that debconf messages can be translated.
-- ctrl*/, text/*, web/*: debian packages only install/update to /usr/share/sbbscvs.
+- ctrl*/, text/*, web/*, data/*: debian packages only install/update to /usr/share/sbbscvs.
   Add debconf questions about if to copy to runtime directory instead of manually setting it?
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
   hostname and sysop info (like system password) 
@@ -50,4 +50,4 @@ Configuration:
 
 
  
- -- Robert James Clay <jame@rocasa.org>  Sun,  23 Aug 2008 09:41 -0400
+ -- Robert James Clay <jame@rocasa.org>  Sun,  2 Nov 2008 09:54 -0500

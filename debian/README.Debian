@@ -29,7 +29,7 @@ xtrn/*	/opt/sbbscvs/xtrn
 ctrl/*  /usr/share/sbbscvs/ctrl 
 text/*  /usr/share/sbbscvs/text
 web/*   /usr/share/sbbscvs/web
-data/*	/var/opt/sbbscvs
+data/*	/usr/share/sbbscvs/data
 
     An /etc/sbbscvs directory is created but is not used by default.
 
