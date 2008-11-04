@@ -1,0 +1,7 @@
+User
+System
+Sysop
+Guru
+/opt/sbbscvs/ctrl/
+/opt/sbbscvs/data/
+; This is a bogus xtrn.dat, just enough for SMB2SMM to run.
