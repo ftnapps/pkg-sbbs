@@ -5,10 +5,10 @@ exec/*	opt/sbbscvs/exec
 exec/tone/*	opt/sbbscvs/exec/tone
 lib/cryptlib/linux.release/libcl.so*	usr/lib
 text/*	usr/share/sbbscvs/text
-node1/*	opt/sbbscvs/node1
-node2/*	opt/sbbscvs/node2
-node3/*	opt/sbbscvs/node3
-node4/*	opt/sbbscvs/node4
+node1/*	usr/share/sbbscvs/node1
+node2/*	usr/share/sbbscvs/node2
+node3/*	usr/share/sbbscvs/node3
+node4/*	usr/share/sbbscvs/node4
 text/menu/*	usr/share/sbbscvs/text/menu
 text/menu/major/*	usr/share/sbbscvs/text/menu/major
 text/menu/pcboard/*	usr/share/sbbscvs/text/menu/pcboard
