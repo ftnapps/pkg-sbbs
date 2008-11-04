@@ -1,4 +1,4 @@
-ctrl/*	usr/share/doc/sbbscvs/ctrl
+ctrl/*	usr/share/sbbscvs/ctrl
 docs/_borders/*	usr/share/doc/sbbscvs/_borders
 docs/images/*	usr/share/doc/sbbscvs/images
 exec/*	opt/sbbscvs/exec
