@@ -15,4 +15,4 @@ SBBS_ENABLE=No
 export SBBSCTRL=/opt/synchronet/ctrl
 
 # Options that are passed to the Daemon.
-DAEMON_ARGS=$SBBSCTRL
+DAEMON_ARGS=$SBBSCTRL/sbbs.ini
