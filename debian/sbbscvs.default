@@ -15,5 +15,5 @@ SBBS_ENABLE=No
 export SBBSCTRL=/opt/sbbscvs/ctrl
 
 # Additional options that are passed to the Daemon.
-DAEMON_ARGS=$SBBSCTRL
+DAEMON_ARGS=$SBBSCTRL/sbbs.ini
 
