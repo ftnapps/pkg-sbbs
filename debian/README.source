@@ -5,7 +5,7 @@ Note that this version of the procedure uses the pre-compiled library file for c
     
 cd /path/to/working/directory
 
-    # Download sbbs_src.tgz from ftp://ftp.synchro.net/sbbs_src.tgz
+    # Download sbbs_src.tgz from ftp://ftp.synchro.net/Synchronet/sbbs_src.tgz
 
     # Extract contents of source archive to working directory. Can then
     # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
@@ -19,7 +19,7 @@ ln -s libcl.so.3.3.0 libcl.so.3
 ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
 
     # Get the required modules for running Synchronet by downloading sbbs_run.tgz from
-    # ftp://ftp.synchro.net/sbbs_run.tgz and extracting that to the working directory.
+    # ftp://ftp.synchro.net/Synchronet/sbbs_run.tgz and extracting that to the working directory.
     # Exclude docs/js/guide & docs/js/ref or delete afterwards if needed to save space.
     # Also exclude or delete afterwards the directory web/root/telnet/tools.
     # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
