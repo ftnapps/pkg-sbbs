@@ -19,7 +19,9 @@ Description: SBBS - Synchronet BBS Software from CVS
  Synchronet Bulletin Board System (SBBS) Software is a free software package
  that can turn your personal computer into your own custom online service
  supporting multiple simultaneous users with hierarchical message and file
- areas, multi-user chat, and the ever-popular BBS door games.
+ areas, multi-user chat, and the ever-popular BBS door games. Command shells
+ available include:  Synchronet (Classic), Synchronet (Novice), WWIV Clone,
+ PCBoard Clone, Wildcat Clone, MajorBBS Clone, & a Renegade Clone.
  Synchronet development began in 1990 as a program for single-tasking MS-DOS
  compatible computers and Hayes compatible modems.  In November of 1999, the
  author began further development of Synchronet specifically for the Internet
