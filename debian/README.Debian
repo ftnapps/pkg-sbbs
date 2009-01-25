@@ -11,6 +11,9 @@ Initial manual setup for running Synchronet
 5) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
 6) As root, or using sudo, run /etc/init.d/synchronet start
 
+     The following online games are not actually provided with the Synchronet installation
+but are already configured:  DoorMUDv0.99, Food Fight!, & Dragons Hoard.
+
 
 Directories
 -----------
