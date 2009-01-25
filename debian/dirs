@@ -7,6 +7,7 @@ opt/synchronet/temp
 opt/synchronet/xtrn
 opt/synchronet/xtrn/sbj
 opt/synchronet/xtrn/sbl
+opt/synchronet/xtrn/smm
 usr/share/lintian/overrides
 var/opt/synchronet
 var/opt/synchronet/data

@@ -31,3 +31,4 @@ xtrn/sbl/sbl.cfg	opt/synchronet/xtrn/sbl
 xtrn/sbl/sbl.doc	opt/synchronet/xtrn/sbl
 xtrn/sbl/sblpack	opt/synchronet/xtrn/sbl
 xtrn/sbl/sysop.txt	opt/synchronet/xtrn/sbl
+xtrn/smm/*	opt/synchronet/xtrn/smm
