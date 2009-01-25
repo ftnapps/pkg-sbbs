@@ -1,0 +1,48 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## config-tbd.dpatch by  <jame@rocasa.org>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: Remove the xtrn/tbd/reroll & xtrn/tbd/tbd files that come with the
+## DP: source archive, as they are actually only scripts that attempt to
+## DP: locate the real executables in a build directory, which is not
+## DP: needed for the debian package.
+
+@DPATCH@
+diff -urNad synchronet_3.14a~/xtrn/tbd/reroll synchronet_3.14a/xtrn/tbd/reroll
+--- synchronet_3.14a~/xtrn/tbd/reroll	2005-11-08 14:33:25.000000000 -0500
++++ synchronet_3.14a/xtrn/tbd/reroll	1969-12-31 19:00:00.000000000 -0500
+@@ -1,15 +0,0 @@
+-#!/bin/sh
+-os=`uname | tr "[A-Z]" "[a-z]"`
+-exename=`basename $0`
+-dirname=`dirname $0`
+-if [ -x $dirname\/gcc.$os.exe.release/$exename ]
+-	then exec $dirname\/gcc.$os.exe.release/$exename $@
+-elif [ -x $dirname\/gcc.$os.exe.debug/$exename ]
+-	then exec $dirname\/gcc.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.release/$exename ]
+-	then exec $dirname\/*.$os.exe.release/$exename $@
+-elif [ -x $dirname\/*.$os.exe.debug/$exename ]
+-	then exec $dirname\/*.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.*/$exename ]
+-	then exec $dirname\/*.$os.exe.*/$exename $@
+-fi
+diff -urNad synchronet_3.14a~/xtrn/tbd/tbd synchronet_3.14a/xtrn/tbd/tbd
+--- synchronet_3.14a~/xtrn/tbd/tbd	2005-11-08 14:27:58.000000000 -0500
++++ synchronet_3.14a/xtrn/tbd/tbd	1969-12-31 19:00:00.000000000 -0500
+@@ -1,15 +0,0 @@
+-#!/bin/sh
+-os=`uname | tr "[A-Z]" "[a-z]"`
+-exename=`basename $0`
+-dirname=`dirname $0`
+-if [ -x $dirname\/gcc.$os.exe.release/$exename ]
+-	then exec $dirname\/gcc.$os.exe.release/$exename $@
+-elif [ -x $dirname\/gcc.$os.exe.debug/$exename ]
+-	then exec $dirname\/gcc.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.release/$exename ]
+-	then exec $dirname\/*.$os.exe.release/$exename $@
+-elif [ -x $dirname\/*.$os.exe.debug/$exename ]
+-	then exec $dirname\/*.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.*/$exename ]
+-	then exec $dirname\/*.$os.exe.*/$exename $@
+-fi
