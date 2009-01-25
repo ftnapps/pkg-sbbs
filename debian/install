@@ -20,7 +20,6 @@ text/menu/wwiv/*	usr/share/synchronet/text/menu/wwiv
 web/lib/*	usr/share/synchronet/web/lib
 web/root/*	usr/share/synchronet/web/root
 web/templates/*	usr/share/synchronet/web/templates
-xtrn/sbj/sbj	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.cfg	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.doc	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.msg	opt/synchronet/xtrn/sbj

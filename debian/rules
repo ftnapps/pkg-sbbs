@@ -80,6 +80,8 @@ install: build
 	dh_install src/sbbs3/syncview/gcc.linux.exe.debug/syncview /opt/synchronet/exec
 	dh_install src/sbbs3/uedit/gcc.linux.exe.debug/uedit /opt/synchronet/exec
 	dh_install src/sbbs3/umonitor/gcc.linux.exe.debug/umonitor /opt/synchronet/exec
+	dh_install xtrn/sbj/gcc.linux.exe.debug/sbjclean /opt/synchronet/xtrn/sbj
+	dh_install xtrn/sbj/gcc.linux.exe.debug/sbj /opt/synchronet/xtrn/sbj
 	dh_install xtrn/sbl/gcc.linux.exe.debug/sbl /opt/synchronet/xtrn/sbl
 	dh_install xtrn/sbl/gcc.linux.exe.debug/sbl2smb /opt/synchronet/xtrn/sbl
 	dh_install xtrn/sbl/gcc.linux.exe.debug/sblpack /opt/synchronet/xtrn/sbl
