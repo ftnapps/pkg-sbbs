@@ -27,3 +27,10 @@ xtrn/sbl/sbl.cfg	opt/synchronet/xtrn/sbl
 xtrn/sbl/sbl.doc	opt/synchronet/xtrn/sbl
 xtrn/sbl/sysop.txt	opt/synchronet/xtrn/sbl
 xtrn/smm/*	opt/synchronet/xtrn/smm
+xtrn/tbd/tbd.doc	opt/synchronet/xtrn/tbd
+xtrn/tbd/readthis.1st	opt/synchronet/xtrn/tbd
+xtrn/tbd/readthis.1st	opt/synchronet/xtrn/tbd
+xtrn/tbd/tbd.ins	opt/synchronet/xtrn/tbd
+xtrn/tbd/tbd.mnu	opt/synchronet/xtrn/tbd
+xtrn/tbd/tbd.sty	opt/synchronet/xtrn/tbd
+xtrn/tbd/tbdwin.ans	opt/synchronet/xtrn/tbd

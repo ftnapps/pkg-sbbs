@@ -86,6 +86,8 @@ install: build
 	dh_install xtrn/sbl/gcc.linux.exe.debug/sbl2smb /opt/synchronet/xtrn/sbl
 	dh_install xtrn/sbl/gcc.linux.exe.debug/sblpack /opt/synchronet/xtrn/sbl
 	dh_install xtrn/sbl/gcc.linux.exe.debug/smb2sbl /opt/synchronet/xtrn/sbl
+	dh_install xtrn/tbd/gcc.linux.exe.debug/tbd /opt/synchronet/xtrn/tbd
+	dh_install xtrn/tbd/gcc.linux.exe.debug/reroll /opt/synchronet/xtrn/tbd
 	# Lintian overrides file
 	install -c -m 444 debian/synchronet.lintian-overrides debian/synchronet/usr/share/lintian/overrides/synchronet
 
