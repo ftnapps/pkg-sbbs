@@ -21,7 +21,8 @@ Description: SBBS - Synchronet BBS Software
  supporting multiple simultaneous users with hierarchical message and file
  areas, multi-user chat, and the ever-popular BBS door games. Command shells
  available include:  Synchronet (Classic), Synchronet (Novice), WWIV Clone,
- PCBoard Clone, Wildcat Clone, MajorBBS Clone, & a Renegade Clone.
+ PCBoard Clone, Wildcat Clone, MajorBBS Clone, & a Renegade Clone. Baja and
+ Server Side Javascript are available with the package for scripting.
  Synchronet development began in 1990 as a program for single-tasking MS-DOS
  compatible computers and Hayes compatible modems.  In November of 1999, the
  author began further development of Synchronet specifically for the Internet
