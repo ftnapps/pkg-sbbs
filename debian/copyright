@@ -45,6 +45,16 @@ Copyright:
     See the GNU Lesser General Public License for more details: lgpl.txt or
     http://www.fsf.org/copyleft/lesser.html
 
+# user_info_to_sysop.js
+exec/user_info_to_sysop.js
+
+Author:  Michael J. Ryan <tracker1@theroughnecks.net>
+Copyright:  
+
+    <Copyright (C) 2006 Michael J. Ryan  
+
+It is licenced under the GNU General Public License (GPL, version 2)                               
+http://www.gnu.org/licenses/gpl.html
 
 #  Java Telnet Applet
 The Java Telnet Applet                                                                                                                  
