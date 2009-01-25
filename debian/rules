@@ -5,6 +5,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+# Use dpatch
+include /usr/share/dpatch/dpatch.make
+
 CFLAGS = -Wall -g
 
 ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
@@ -17,7 +20,7 @@ endif
 export SBBSDIR=/opt/synchronet
 
 configure: configure-stamp
-configure-stamp:
+configure-stamp: patch-stamp
 	dh_testdir
 	# Add here commands to configure the package.
 
@@ -42,6 +45,7 @@ build-stamp: configure-stamp
 clean:
 	dh_testdir
 	dh_testroot
+	unpatch
 	rm -f build-stamp configure-stamp
 
 	# Add here commands to clean up after the build process.
