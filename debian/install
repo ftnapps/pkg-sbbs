@@ -24,11 +24,7 @@ xtrn/sbj/sbj	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.cfg	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.doc	opt/synchronet/xtrn/sbj
 xtrn/sbj/sbj.msg	opt/synchronet/xtrn/sbj
-xtrn/sbj/sbjclean	opt/synchronet/xtrn/sbj
-xtrn/sbl/sbl	opt/synchronet/xtrn/sbl
-xtrn/sbl/sbl2smb	opt/synchronet/xtrn/sbl
 xtrn/sbl/sbl.cfg	opt/synchronet/xtrn/sbl
 xtrn/sbl/sbl.doc	opt/synchronet/xtrn/sbl
-xtrn/sbl/sblpack	opt/synchronet/xtrn/sbl
 xtrn/sbl/sysop.txt	opt/synchronet/xtrn/sbl
 xtrn/smm/*	opt/synchronet/xtrn/smm
