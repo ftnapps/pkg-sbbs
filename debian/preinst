@@ -16,6 +16,8 @@ set -e
 
 case "$1" in
     install|upgrade)
+        # configure 'mbse' user and 'bbs' group
+        getent passwd sbbs >/dev/null 2>&1 || adduser --system --quiet --home /opt/synchronet --group --shell /bin/bash --gecos "Synchronet BBS Admin" sbbs || adduser sbbs uucp || adduser sbbs dialout || adduser sbbs dip
     ;;
 
     abort-upgrade)
