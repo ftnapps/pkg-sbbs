@@ -1,4 +1,6 @@
 opt/synchronet/ctrl etc/opt/synchronet
+opt/synchronet/exec/libcl.so.3.3.0 opt/synchronet/exec/libcl.so.3
+opt/synchronet/exec/libcl.so.3.3.0 opt/synchronet/exec/libcl.so
 opt/synchronet/exec/libftpsrvr.so opt/synchronet/exec/libftpsrvr.so.3
 opt/synchronet/exec/libmailsrvr.so opt/synchronet/exec/libmailsrvr.so.3
 opt/synchronet/exec/libsbbs.so opt/synchronet/exec/libsbbs.so.3
