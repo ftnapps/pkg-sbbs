@@ -1,65 +1,29 @@
     README.source for Synchronet release 3.14a.
-    
-Note that this version of the package uses the pre-compiled library file for cryptlib
-provided in the upstream sources.
 
 
 Procedure for createing a source archive
 =========================================
 
-    # Create working directory named synchronet_3.14a-0.1, then change to that directory.
-cd /path/to/working/directory/synchronet_3.14a-0.1
+    # Create working directory named synchronet_3.14a, then change to that directory.
+cd /path/to/working/directory/synchronet-3.14a
 
     # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
+wget ftp://vert.synchro.net/Synchronet/ssrc314a.tgz
 
-    # Extract contents of upstream source archive to working directory.  Can then
-    # delete include/microsoft, include/mozilla, include/sdl, lib/mozilla;  they are not needed.
-    # Also remove lib/CVS, lib/cryptlib/CVS, and lib/cryptlib/linux.release/CVS.
-    # Delete src/sbbs3/menuedit (Per author, menuedit is not a currently maintained project.)
-rmdir --ignore-fail-on-non-empty src/sbbs3/menuedit
-    # Can also now move the archive ssrc314a.tgz out of the working directory.
+    # Extract contents of upstream source archive to working directory.
+tar -xzvf ssrc314a.tgz     
+    
+    # Now move the archive ssrc314a.tgz out of the working directory.
 mv ssrc314a.tgz ..
-    
-    # Instead of being a symbolic link, the file libcl.so is a full copy of the file
-    # libcl.so.3.3.0.  Remove libcl.so.  Create symbolic links from libcl.so.3.3.0
-    # to libcl.so & libcl.so.3.
-cd lib/cryptlib/linux.release
-rm -f libcl.so
-ln -s libcl.so.3.3.0 libcl.so
-ln -s libcl.so.3.3.0 libcl.so.3
-    # This is needed for the package build (needs to be redone if doing multiple builds),
-    # if doing the package elsewhere from where the source archive was built, do it there.
-    # ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
 
-    # The executables for sbj, sbl, & tpd that come with the source archive are actually only scripts
-    # that attempt to locate the real excecutables in a build directory, which is not needed for
-    # the debian package.   Remove them from the source archive for the debian package.
-rm -f xtrn/sbj/sbj
-rm -f xtrn/sbj/sbjclean
-rm -f xtrn/sbl/sbl
-rm -f xtrn/sbl/sbl2smb
-rm -f xtrn/sbl/sblpack
-rm -f xtrn/sbl/smb2sbl
-rm -f xtrn/tbd/reroll
-rm -f xtrn/tbd/tbd
-
-    # Get the required modules for running synchronet.  Exclude docs/js/guide &
-    # docs/js/ref or delete afterwards if needed to save space.
+    # Get the required modules for running synchronet.
 cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
-    # Also exclude or delete afterwards the directory web/root/telnet/tools.
-    # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
-    # Correct the file permissions on the file ircd.conf
-chmod 644 ctrl/ircd.conf
-    # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
-chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
-    # Correct the first lines of the files exec/gnats_cvs.js and exec/sendmail.js to 
-    # as follows:  "#!/opt/synchronet/exec/jsexec -x -c /opt/synchronet/ctrl"
     
-    # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
-    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other three
-    # instances of it on that line.  Those setup a more correct rpath in 
-    # the executables than that set by a regular compile & install.
-    
+    # Remove the Jasascript Documentation arhives, as they are not needed when have the
+    # extracted documentation available.
+rm -f /docs/js/guide/CoreGuideJS15.zip
+rm -f /docs/js/guide/CoreReferenceJS15.zip
+
     # Create the source archive from the working directory. 
 
 
