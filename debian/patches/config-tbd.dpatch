@@ -1,5 +1,5 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## config-tbd.dpatch by  <jame@rocasa.org>
+## config-tbd.dpatch by  <jame@rocasa.us>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Remove the xtrn/tbd/reroll & xtrn/tbd/tbd files that come with the

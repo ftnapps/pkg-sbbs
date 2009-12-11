@@ -1,5 +1,5 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## config-sbj.dpatch by  <jame@rocasa.org>
+## config-sbj.dpatch by  <jame@rocasa.us>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Remove the xtrn/sbj/sbj & xtrn/sbj/sbjclean files that come with

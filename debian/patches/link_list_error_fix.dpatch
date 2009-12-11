@@ -1,5 +1,5 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## link_list_error_fix.dpatch by  <jame@pcorg.rocasa.net>
+## link_list_error_fix.dpatch by  <jame@rocasa.us>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Line 133 in src/xpdev/link_list.c was causing the following error during a compile:

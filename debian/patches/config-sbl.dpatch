@@ -1,5 +1,5 @@
 #! /bin/sh /usr/share/dpatch/dpatch-run
-## config-sbl.dpatch by  <jame@rocasa.org>
+## config-sbl.dpatch by  <jame@rocasa.us>
 ##
 ## All lines beginning with `## DP:' are a description of the patch.
 ## DP: Remove the xtrn/sbl/sbl & xtrn/sbl2smb, xtrn/sbl/sblpack, & xtrn/sbl/smb2sbl
