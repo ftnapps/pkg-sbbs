@@ -1,18 +1,6 @@
-synchronet (3.14a-0.3) UNRELEASED; urgency=low
+synchronet (3.14a-0.4) UNRELEASED; urgency=low
 
-  * Debian Synchronet version 3.14a-0.3
+  * Debian Synchronet version 3.14a-0.4
 
- -- Robert James Clay <jame@rocasa.org>  Sun, 25 Jan 2009 17:04:07 -0500
-
-synchronet (3.14a-0.2) UNRELEASED; urgency=low
-
-  * Debian Synchronet version 3.14a-0.2
-
- -- Robert James Clay <jame@rocasa.org>  Sat,  2 Aug 2008 21:17:07 -0400
-
-synchronet (3.14a-0.1) UNRELEASED; urgency=low
-
-  * Debian Synchronet version 3.14a-0.1
-
- -- Robert James Clay <jame@rocasa.org>  Sat, 26 Apr 2008 19:50:28 -0400
+ -- Robert James Clay <jame@rocasa.org>  Fri, 25 Dec 2009 11:22:07 -0500
 
