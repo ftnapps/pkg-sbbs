@@ -1,0 +1,32 @@
+#ifeq ($(os),sunos)
+# CIOLIB-MT_LIBS		+=	$(UL_PRE)curses$(UL_SUF)
+#else
+# CIOLIB-MT_LIBS		+=	$(UL_PRE)ncurses$(UL_SUF)
+#endif
+CIOLIB-MT_LIBS		+=	$(UL_PRE)ncurses$(UL_SUF)
+ifndef NO_X
+ ifdef STATIC
+  CIOLIB-MT_LIBS		+=	-L$(X_PATH)$(DIRSEP)lib -lX11
+ else
+  ifeq ($(os),darwin)
+   CIOLIB-MT_LIBS		+=  $(UL_PRE)dl$(UL_SUF)
+  endif
+  ifeq ($(os),linux)
+   CIOLIB-MT_LIBS		+=  $(UL_PRE)dl$(UL_SUF)
+  endif
+  ifeq ($(os),sunos)
+   CIOLIB-MT_LIBS		+=  $(UL_PRE)dl$(UL_SUF)
+  endif
+ endif
+else
+  ifeq ($(os),darwin)
+   CIOLIB-MT_CFLAGS		+=  -DDISABLE_X11=1
+  endif
+endif
+
+ifdef NO_X
+ ifndef WITH_SDL
+  CIOLIB-MT_CFLAGS		+=	-DNO_FONTS
+  CIOLIB-CFLAGS			+=	-DNO_FONTS
+ endif
+endif

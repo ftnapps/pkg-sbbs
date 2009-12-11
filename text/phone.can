@@ -1,0 +1,3 @@
+; Enter disallowed phone numbers in this file
+; Wildcard characters (*, ~, ^) are allowed
+; Rejection message file: text/badphone.msg
