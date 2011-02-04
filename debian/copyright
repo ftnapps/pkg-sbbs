@@ -1,5 +1,5 @@
-This package was debianized by Robert James Clay <jame@rocasa.us> on
-Tue, 26 Feb 2008 17:15:57 -0500.
+This package was originally debianized by Robert James Clay <jame@rocasa.us> 
+on Tue, 26 Feb 2008 17:15:57 -0500.
 
 It was downloaded from http://www.synchro.net
 
@@ -27,8 +27,8 @@ On Debian systems, the complete text of the GNU General
 Public License can be found in `/usr/share/common-licenses/GPL'.
 
 # Debian packaging
-The Debian packaging is (C) 2008, Robert James Clay <jame@rocasa.us> and
-is licensed under the GPL, see above.
+The Debian packaging is (C) 2008-2011, Robert James Clay <jame@rocasa.us> 
+and is licensed under the GPL, see above.
 
 # Library related files
 The files in the comio, conio, smblib, uifc, and xpdev are covered under
