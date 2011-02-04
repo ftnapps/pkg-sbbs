@@ -2,7 +2,7 @@ Source: synchronet
 Section: non-free/net
 Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
-Build-Depends: debhelper (>= 5), dpatch, libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev
+Build-Depends: debhelper (>= 5), dpatch, libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev, sblibcl-dev
 Standards-Version: 3.8.0
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
 Vcs-Svn: svn://rocasa.org/syncdeb/synchronet/trunk/debian
@@ -11,7 +11,7 @@ Homepage: http://www.synchro.net
 
 Package: synchronet
 Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
+Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common, sblibcl
 Recommends: make, zip, unzip, dosemu, dosemu-freedos
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
 Provides: httpd, httpd-cgi, ftp-server, news-transport-system, pop3-server, telnet-server
