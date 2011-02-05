@@ -10,7 +10,7 @@ Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/sbbscvs
 Homepage: http://www.synchro.net
 
 Package: sbbscvs
-Architecture: i386
+Architecture: i386 amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Recommends: make, zip, unzip, dosemu, dosemu-freedos
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
