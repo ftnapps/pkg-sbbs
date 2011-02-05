@@ -10,7 +10,7 @@
 #                    Synchronet BBS & should be placed in /etc/init.d.
 ### END INIT INFO
 
-# Author: Robert James Clay <jame@rocasa.org>
+# Author: Robert James Clay <jame@rocasa.us>
 
 # Do NOT "set -e"
 

@@ -49,4 +49,4 @@ doc/*	/usr/share/doc/sbbscvs  (except docs/js)
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet CVS source archve was put together.
 
- -- Robert James Clay <jame@rocasa.org>  Sun,  2 Nov 2008 09:59 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sun,  2 Nov 2008 09:59 -0500

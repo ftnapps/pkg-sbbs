@@ -1,7 +1,7 @@
 Source: sbbscvs
 Section: non-free/net
 Priority: extra
-Maintainer: Robert James Clay <jame@rocasa.org>
+Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.50~), libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev
 Standards-Version: 3.8.0
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
