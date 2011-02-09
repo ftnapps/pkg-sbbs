@@ -3,7 +3,6 @@ docs/_borders/*	usr/share/doc/sbbscvs/_borders
 docs/images/*	usr/share/doc/sbbscvs/images
 exec/*	opt/sbbscvs/exec
 exec/tone/*	opt/sbbscvs/exec/tone
-lib/cryptlib/linux.release/libcl.so*	usr/lib
 text/*	usr/share/sbbscvs/text
 node1/*	usr/share/sbbscvs/node1
 node2/*	usr/share/sbbscvs/node2
