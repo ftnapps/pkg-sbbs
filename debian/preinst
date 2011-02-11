@@ -16,6 +16,8 @@ set -e
 
 case "$1" in
     install|upgrade)
+        # configure 'sbbscvs' user and group
+        getent passwd sbbscvs >/dev/null 2>&1 || adduser --system --quiet --home /opt/sbbscvs --group --shell /bin/bash --gecos "SBBSCVS Admin" sbbscvs || adduser sbbscvs uucp || adduser sbbscvs dialout || adduser sbbscvs dip
     ;;
 
     abort-upgrade)
