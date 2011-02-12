@@ -6,7 +6,7 @@ Build-Depends: debhelper (>= 5), dpatch, libncurses5-dev, libnspr4-dev, libmozjs
 Standards-Version: 3.8.0
 Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
 Vcs-Svn: svn://rocasa.org/syncdeb/synchronet/trunk/debian
-Vcs-Browser: http://rocasa.org/cgi-bin/viewvc.cgi/syncdeb/synchronet
+Vcs-Browser: http://git.rocasa.org/gitweb.cgi/sbbsdeb.git
 Homepage: http://www.synchro.net
 
 Package: synchronet
