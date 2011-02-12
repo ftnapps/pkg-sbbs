@@ -34,6 +34,13 @@ case "$1" in
 	# Populate the ctrl directory with an intial set of files
 	/bin/cp -r /usr/share/synchronet/text/* /opt/synchronet/text
     fi
+    # Create web/ directory if not already present
+    if [ ! -d "/opt/synchronet/web/" ]; then
+	# Create web/ directory
+	/bin/mkdir --mode=755 /opt/synchronet/web
+	# Populate the web directory with an intial set of files
+	/bin/cp -r /usr/share/synchronet/web/* /opt/synchronet/web
+    fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
