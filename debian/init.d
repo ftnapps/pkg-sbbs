@@ -16,7 +16,7 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC="Synchronet BBS"
+DESC="Synchronet BBS from CVS"
 NAME=sbbs
 DAEMON=/opt/sbbscvs/exec/$NAME
 DAEMON_ARGS=""
@@ -30,7 +30,7 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -r /etc/default/sbbscvs ] && . /etc/default/sbbscvs
 
 # Exit if not yet configured.
-[ "$SBBS_ENABLE" = "No" ] && exit 0
+[ "$SBBSCVS_ENABLE" = "No" ] && exit 0
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh
