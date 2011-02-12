@@ -27,6 +27,13 @@ case "$1" in
 	# Populate the ctrl directory with an intial set of files
 	/bin/cp /usr/share/synchronet/ctrl/* /opt/synchronet/ctrl
     fi
+    # Create text/ directory if not already present
+    if [ ! -d "/opt/synchronet/text/" ]; then
+	# Create text/ directory
+	/bin/mkdir --mode=755 /opt/synchronet/text
+	# Populate the ctrl directory with an intial set of files
+	/bin/cp -r /usr/share/synchronet/text/* /opt/synchronet/text
+    fi
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
