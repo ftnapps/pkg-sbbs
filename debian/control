@@ -4,8 +4,7 @@ Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 5), dpatch, libncurses5-dev, libnspr4-dev, libmozjs-dev, libx11-dev, sblibcl-dev
 Standards-Version: 3.8.0
-Vcs-Cvs: cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs 
-Vcs-Svn: svn://rocasa.org/syncdeb/synchronet/trunk/debian
+Vcs-Git: git://git.rocasa.org/sbbsdeb.git
 Vcs-Browser: http://git.rocasa.org/gitweb.cgi/sbbsdeb.git
 Homepage: http://www.synchro.net
 
