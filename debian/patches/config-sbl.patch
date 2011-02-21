@@ -1,16 +1,10 @@
-#! /bin/sh /usr/share/dpatch/dpatch-run
-## config-sbl.dpatch by  <jame@rocasa.us>
-##
-## All lines beginning with `## DP:' are a description of the patch.
-## DP: Remove the xtrn/sbl/sbl & xtrn/sbl2smb, xtrn/sbl/sblpack, & xtrn/sbl/smb2sbl
-## DP: files that come with the source archive, as they are actually only scripts
-## DP: that attempt to locate the real executables in a build directory, which is
-## DP: not needed for the debian package.
-
-@DPATCH@
-diff -urNad synchronet_3.14a~/xtrn/sbl/sbl synchronet_3.14a/xtrn/sbl/sbl
---- synchronet_3.14a~/xtrn/sbl/sbl	2004-11-03 14:36:58.000000000 -0500
-+++ synchronet_3.14a/xtrn/sbl/sbl	1969-12-31 19:00:00.000000000 -0500
+Author: <jame@rocasa.us>
+Description: Remove the xtrn/sbl/sbl & xtrn/sbl2smb, xtrn/sbl/sblpack, & xtrn/sbl/smb2sbl
+files that come with the source archive, as they are actually only scripts
+that attempt to locate the real executables in a build directory, which is
+not needed for the debian package.
+--- synchronet-3.14a.orig/xtrn/sbl/sbl
++++ /dev/null
 @@ -1,15 +0,0 @@
 -#!/bin/sh
 -os=`uname | tr "[A-Z]" "[a-z]"`
@@ -27,9 +21,8 @@ diff -urNad synchronet_3.14a~/xtrn/sbl/sbl synchronet_3.14a/xtrn/sbl/sbl
 -elif [ -x $dirname\/*.$os.exe.*/$exename ]
 -	then exec $dirname\/*.$os.exe.*/$exename $@
 -fi
-diff -urNad synchronet_3.14a~/xtrn/sbl/sbl2smb synchronet_3.14a/xtrn/sbl/sbl2smb
---- synchronet_3.14a~/xtrn/sbl/sbl2smb	2004-11-11 01:41:09.000000000 -0500
-+++ synchronet_3.14a/xtrn/sbl/sbl2smb	1969-12-31 19:00:00.000000000 -0500
+--- synchronet-3.14a.orig/xtrn/sbl/sbl2smb
++++ /dev/null
 @@ -1,15 +0,0 @@
 -#!/bin/sh
 -os=`uname | tr "[A-Z]" "[a-z]"`
@@ -46,9 +39,8 @@ diff -urNad synchronet_3.14a~/xtrn/sbl/sbl2smb synchronet_3.14a/xtrn/sbl/sbl2smb
 -elif [ -x $dirname\/*.$os.exe.*/$exename ]
 -	then exec $dirname\/*.$os.exe.*/$exename $@
 -fi
-diff -urNad synchronet_3.14a~/xtrn/sbl/sblpack synchronet_3.14a/xtrn/sbl/sblpack
---- synchronet_3.14a~/xtrn/sbl/sblpack	2005-01-22 14:37:37.000000000 -0500
-+++ synchronet_3.14a/xtrn/sbl/sblpack	1969-12-31 19:00:00.000000000 -0500
+--- synchronet-3.14a.orig/xtrn/sbl/sblpack
++++ /dev/null
 @@ -1,15 +0,0 @@
 -#!/bin/sh
 -os=`uname | tr "[A-Z]" "[a-z]"`
@@ -65,9 +57,8 @@ diff -urNad synchronet_3.14a~/xtrn/sbl/sblpack synchronet_3.14a/xtrn/sbl/sblpack
 -elif [ -x $dirname\/*.$os.exe.*/$exename ]
 -	then exec $dirname\/*.$os.exe.*/$exename $@
 -fi
-diff -urNad synchronet_3.14a~/xtrn/sbl/smb2sbl synchronet_3.14a/xtrn/sbl/smb2sbl
---- synchronet_3.14a~/xtrn/sbl/smb2sbl	2004-11-11 01:41:09.000000000 -0500
-+++ synchronet_3.14a/xtrn/sbl/smb2sbl	1969-12-31 19:00:00.000000000 -0500
+--- synchronet-3.14a.orig/xtrn/sbl/smb2sbl
++++ /dev/null
 @@ -1,15 +0,0 @@
 -#!/bin/sh
 -os=`uname | tr "[A-Z]" "[a-z]"`

@@ -6,7 +6,7 @@
 #export DH_VERBOSE=1
 
 # Use dpatch
-include /usr/share/dpatch/dpatch.make
+include /usr/share/quilt/quilt.make
 
 CFLAGS = -Wall -g
 
@@ -20,7 +20,7 @@ endif
 export SBBSDIR=/opt/synchronet
 
 configure: configure-stamp
-configure-stamp: patch-stamp
+configure-stamp: $(QUILT_STAMPFN)
 	dh_testdir
 	# Add here commands to configure the package.
 
