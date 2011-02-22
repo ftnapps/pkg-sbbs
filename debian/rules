@@ -33,7 +33,7 @@ build-stamp: configure-stamp
 	dh_testdir
 
 	# Add here commands to compile the package.
-	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIBDIR=/opt/synchronet/exec NSPRDIR=/opt/synchronet/exec CRYPTLIBDIR=/usr/lib USE_DOSEMU=1
+	$(MAKE) -C src/sbbs3 DEBUG=1 JSLIB=mozjs JSLIBDIR=/usr/lib NSPRDIR=/usr/lib CRYPTLIBDIR=/usr/lib USE_DOSEMU=1
 	$(MAKE) -C src/sbbs3/scfg DEBUG=1
 	$(MAKE) -C src/sbbs3/syncview
 	$(MAKE) -C src/sbbs3/umonitor
