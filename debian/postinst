@@ -41,6 +41,10 @@ case "$1" in
 	# Populate the web directory with an intial set of files
 	/bin/cp -r /usr/share/synchronet/web/* /opt/synchronet/web
     fi
+    
+    #  Set default user:group for Synchronet directory tree
+    chown -R sbbs:sbbs /opt/synchronet
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
