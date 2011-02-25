@@ -1,6 +1,6 @@
-synchronet (3.14a-0.6) lenny; urgency=low
+synchronet (3.14a-0.7) UNRELEASED; urgency=low
 
-  * Debian pre-release Synchronet package version 3.14a-0.6
+  * Debian pre-release Synchronet package version 3.14a-0.7
 
- -- Robert James Clay <jame@rocasa.us>  Thu, 24 Feb 2011 18:27:13 -0500
+ -- Robert James Clay <jame@rocasa.us>  Thu, 24 Feb 2011 19:16:43 -0500
 
