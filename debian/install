@@ -4,10 +4,10 @@ docs/images/*	usr/share/doc/sbbscvs/images
 exec/*	opt/sbbscvs/exec
 exec/tone/*	opt/sbbscvs/exec/tone
 text/*	usr/share/sbbscvs/text
-node1/*	usr/share/sbbscvs/node1
-node2/*	usr/share/sbbscvs/node2
-node3/*	usr/share/sbbscvs/node3
-node4/*	usr/share/sbbscvs/node4
+node1/*	usr/share/sbbscvs/nodes/node1
+node2/*	usr/share/sbbscvs/nodes/node2
+node3/*	usr/share/sbbscvs/nodes/node3
+node4/*	usr/share/sbbscvs/nodes/node4
 text/menu/*	usr/share/sbbscvs/text/menu
 text/menu/major/*	usr/share/sbbscvs/text/menu/major
 text/menu/pcboard/*	usr/share/sbbscvs/text/menu/pcboard
