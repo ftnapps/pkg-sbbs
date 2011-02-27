@@ -113,7 +113,7 @@ ifdef SBBSDIR
  ifeq ($(os),sunos)
   LD_RUN_PATH	:=	$(SBBSDIR)/exec:$(PWD)/$(LIBODIR):$(PWD)/$(JSLIBDIR):$(PWD)/$(NSPRDIR):$(PWD)/$(CRYPTLIBDIR):/opt/sfw/gcc-3/lib
  else
-  LD_RUN_PATH	:=	$(SBBSDIR)/exec:$(SBBSDIR)/exec:$(JSLIBDIR):$(NSPRDIR):$(CRYPTLIBDIR)
+  LD_RUN_PATH	:=	$(SBBSDIR)/exec:$(PWD)/$(LIBODIR):$(PWD)/$(JSLIBDIR):$(PWD)/$(NSPRDIR):$(PWD)/$(CRYPTLIBDIR)
  endif
 else
  ifeq ($(os),sunos)
