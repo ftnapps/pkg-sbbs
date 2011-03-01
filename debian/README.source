@@ -1,32 +1,54 @@
     Createing a source archive for Synchronet release 3.15a from the CVS repository.
-    
-Note that this version of the procedure uses the pre-compiled library file for cryptlib.
 
-    
-cd /path/to/working/directory
+    An example of a script for creating an SBBS source archive.    
+================================================================================
+    # Set the working directory    
+    WORK=/path/to/working/directory
 
-    # Download sbbs_src.tgz from ftp://ftp.synchro.net/Synchronet/sbbs_src.tgz
+    # If do not already have it in the working directory;  download the file 
+    # sbbs_src.tgz from ftp://ftp.synchro.net.
+    if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
+	wget ftp://ftp.synchro.net/sbbs_src.tgz
+    fi
 
-    # Extract contents of source archive to working directory. Can then
-    # delete include/microsoft, include/mozilla, include/sdl;  they are not needed.
-    # Delete src/sbbs3/menuedit;  per author, it is not a currently maintained project.
-    
-    # Replace libcl.so with a symlink from libcl.so & libcl.so.3 to libcl.so.3.3.0 
-cd lib/cryptlib/linux.release
-ln -s libcl.so.3.3.0 libcl.so
-ln -s libcl.so.3.3.0 libcl.so.3
-    # this is needed for the package build (needs to be redone if doing multiple builds)
-ln -s `pwd`/libcl.so.3.3.0 /usr/lib/libcl.so
+    # If do not already have it in the working directory;  download the file 
+    # sbbs_run.tgz from ftp://ftp.synchro.net. (Does not change as often.)
+    if [ ! -e "$WORKDIR/sbbs_run.tgz" ]; then
+	wget ftp://ftp.synchro.net/sbbs_run.tgz
+    fi
 
-    # Get the required modules for running Synchronet by downloading sbbs_run.tgz from
-    # ftp://ftp.synchro.net/Synchronet/sbbs_run.tgz and extracting that to the working directory.
-    # Exclude docs/js/guide & docs/js/ref or delete afterwards if needed to save space.
-    # Also exclude or delete afterwards the directory web/root/telnet/tools.
-    # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
-    
-    # Copy debian directory to working directory
-    
-    # Update debian/changelog as neccessary.		
-    
-    # To just build a binary package, where "name@example.org" is your email address.
-debuild --no-lintian -rfakeroot -ename@example.org  -us -uc -b
+    # The format of the version string for the acrhive is YYMMDD, where YY is the
+    # last two digits of the year, MM is the month number, & DD is the day number.
+    # The date of the source code archive is noted in the FILE_ID.DIZ file in the
+    # sbbs_src.tgz source archive available at ftp://ftp.synchro.net.  For now,
+    # creating it from todays date.
+    YYMMDD=`date +%y%m%d`
+
+    # Set the current Synchronet version being used.
+    SBVER="3.15a"
+
+    # Set working source directory
+    SRCVER=synchronet-$SBVER~$YYMMDD
+    ORIGVER=synchronet_$SBVER~$YYMMDD
+
+    # Set working source directory
+    SRCDIR=$WORKDIR/$SRCVER
+
+    # Create source directory named in the format synchronet-SBVER~YYMMDD if not
+    # already present
+    if [ ! -d $SRCDIR ]; then
+	mkdir $SRCDIR
+    fi
+
+    # Extract contents of upstream source archives to the source working directory.
+    cd $SRCDIR
+    tar -xzf $WORKDIR/sbbs_src.tgz --exclude=CVS
+    tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
+
+    # Create the source archive from the working source directory.
+    cd $WORKDIR
+    tar cfj $ORIGVER.orig.tar.bz2 $SRCVER/ && rm -fr $SRCDIR
+
+================================================================================
+    Note that the script create-orig-source is viewable in the debian-315 branch
+of the syncdeb project respository at http://git.rocasa.org/gitweb.cgi/sbbsdeb.git.
