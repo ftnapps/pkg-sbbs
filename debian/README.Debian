@@ -5,11 +5,11 @@ Synchronet for Debian
 Initial Manual setup for running Synchronet
 -------------------------------------------
 
-1) Copy /usr/share/sbbscvs/node1,2,3,4 directories to /opt/sbbscvs/
+1) Copy /usr/share/synchronet/node1,2,3,4 directories to /opt/synchronet/
 2) Correct directories in XTRN.DAT file in node directories or copy the example one
-3) Configure SBBS (sbbscvs) as desired, running scfg & editing ctrl/* as neccessary.
-4) Change the SBBSCVS_ENABLE setting to Yes in /etc/default/sbbscvs
-5) As root, or using sudo, run /etc/init.d/sbbscvs start
+3) Configure SBBS (Synchronet) as desired, running scfg & editing ctrl/* as neccessary.
+4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
+5) As root, or using sudo, run /etc/init.d/synchronet start
 
 
 Directories
@@ -18,34 +18,31 @@ Directories
     Synchronet (SBBS) content directories are installed as follows:
 
     Synchronet executables and libraries
-exec/*	/opt/sbbscvs/exec
-xtrn/*	/opt/sbbscvs/xtrn
+exec/*	/opt/synchronet/exec
+xtrn/*	/opt/synchronet/xtrn
 
-    Cryptlib library file libcl.so.3.3.0 is installed to /usr/lib, and libcl.so
-    and libcl.so.3 are symlinks to it.
-    
     Synchronet ctrl, text, & web content are installed/updated as follows:
-ctrl/*  /usr/share/sbbscvs/ctrl 
-text/*  /usr/share/sbbscvs/text
-web/*   /usr/share/sbbscvs/web
-data/*	/usr/share/sbbscvs/data
-    Those directories in the /opt/sbbscvs base directory are initially populated by
-    the contents of the same directories in /usr/share/sbbscvs when the package is
+ctrl/*  /usr/share/synchronet/ctrl 
+text/*  /usr/share/synchronet/text
+web/*   /usr/share/synchronet/web
+data/*	/usr/share/synchronet/data
+    Those directories in the /opt/synchronet base directory are initially populated by
+    the contents of the same directories in /usr/share/synchronet when the package is
     first installed.  (Any later updates should be done by the sysop.)    
 
-    An /etc/sbbscvs directory is created but is not used by default.
+    An /etc/synchronet directory is created but is not used by default.
 
     Synchronet Documentation is installed as follows:
-doc/*	/usr/share/doc/sbbscvs  (except docs/js)
-    And a symbolic link is installed from /opt/sbbscvs/doc to there.
+doc/*	/usr/share/doc/synchronet  (except docs/js)
+    And a symbolic link is installed from /opt/synchronet/doc to there.
 
-    Example Debian ini/cfg files are installed to /usr/share/doc/sbbscvs/examples.
+    Example Debian ini/cfg files are installed to /usr/share/doc/synchronet/examples.
     Also, doc-base is used to register the docs index.htm file
 
-    A /var/spool/sbbscvs directory is created, and is used by the example Debian
+    A /var/spool/sbbs directory is created, and is used by the example Debian
     binkd.cfg file.
 
     See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
     notes about how the Synchronet CVS source archve was put together.
 
- -- Robert James Clay <jame@rocasa.us>  Fri, 25 Feb 2011 20:33 -0500
+ -- Robert James Clay <jame@rocasa.us>  Fri,  1 Mar 2011 12:36 -0500

@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-# sbbscvs package debian/rules.
+# Synchronet BBS package debian/rules.
 
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
@@ -17,7 +17,7 @@ endif
 HW := $(shell uname -m)
 
 # Set SBBSDIR to base installation directory.
-export SBBSDIR=/opt/sbbscvs
+export SBBSDIR=/opt/synchronet
 
 configure: configure-stamp
 configure-stamp:
@@ -62,17 +62,17 @@ install: build
 	dh_prep
 	dh_installdirs
 
-	# Add here commands to install the package into debian/sbbscvs.
-	dh_install src/conio/gcc.linux.$(HW).lib.debug/libciolib_mt.a /opt/sbbscvs/exec
-	dh_install src/smblib/gcc.linux.$(HW).lib.debug/libsmb.a /opt/sbbscvs/exec
-	dh_install src/uifc/gcc.linux.$(HW).lib.debug/libuifc_mt.a /opt/sbbscvs/exec
-	dh_install src/xpdev/gcc.linux.$(HW).lib.debug/libxpdev* /opt/sbbscvs/exec
-	dh_install src/sbbs3/gcc.linux.$(HW).lib.debug/lib* /opt/sbbscvs/exec
-	dh_install src/sbbs3/gcc.linux.$(HW).exe.debug/* /opt/sbbscvs/exec
-	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.debug/scfg* /opt/sbbscvs/exec
-	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.debug/syncview /opt/sbbscvs/exec
-	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.debug/uedit /opt/sbbscvs/exec
-	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor /opt/sbbscvs/exec
+	# Add here commands to install the package into debian/synchronet.
+	dh_install src/conio/gcc.linux.$(HW).lib.debug/libciolib_mt.a /opt/synchronet/exec
+	dh_install src/smblib/gcc.linux.$(HW).lib.debug/libsmb.a /opt/synchronet/exec
+	dh_install src/uifc/gcc.linux.$(HW).lib.debug/libuifc_mt.a /opt/synchronet/exec
+	dh_install src/xpdev/gcc.linux.$(HW).lib.debug/libxpdev* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.$(HW).lib.debug/lib* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.$(HW).exe.debug/* /opt/synchronet/exec
+	dh_install src/sbbs3/scfg/gcc.linux.$(HW).exe.debug/scfg* /opt/synchronet/exec
+	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.debug/syncview /opt/synchronet/exec
+	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.debug/uedit /opt/synchronet/exec
+	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor /opt/synchronet/exec
 
 
 # Build architecture-independent files here.

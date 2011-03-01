@@ -1,18 +1,18 @@
-# Defaults for sbbscvs initscript
-# sourced by /etc/init.d/sbbscvs
-# installed at /etc/default/sbbscvs by the maintainer scripts
+# Defaults for synchronet initscript
+# sourced by /etc/init.d/synchronet
+# installed at /etc/default/synchronet by the maintainer scripts
 
 #
 # This is a POSIX shell fragment
 #
 
-# Run sbbscvs at startup ? Set to "Yes" after configuring sbbscvs
+# Run synchronet at startup ? Set to "Yes" after configuring synchronet
 # in order for it to start at bootup.
-SBBSCVS_ENABLE=No
+SBBS_ENABLE=No
 
 # SBBSCTRL should be set to the directory where the sbbs.ini file is
 # located.  Defaults to /sbbs/ctrl.
-export SBBSCTRL=/opt/sbbscvs/ctrl
+export SBBSCTRL=/opt/synchronet/ctrl
 
 # Additional options that are passed to the Daemon.
 DAEMON_ARGS=$SBBSCTRL/sbbs.ini

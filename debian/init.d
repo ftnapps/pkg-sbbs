@@ -1,13 +1,13 @@
 #! /bin/sh
 ### BEGIN INIT INFO
-# Provides:          sbbscvs
+# Provides:          Synchronet
 # Required-Start:    $local_fs $remote_fs
 # Required-Stop:     $local_fs $remote_fs
 # Default-Start:     2 3 4 5
 # Default-Stop:      0 1 6
-# Short-Description: sbbscvs initscript
-# Description:       This file is the initscript for the CSV version of 
-#                    Synchronet BBS & should be placed in /etc/init.d.
+# Short-Description: Synchronet initscript
+# Description:       This file is the initscript for Synchronet BBS
+#		     and  should be placed in /etc/init.d.
 ### END INIT INFO
 
 # Author: Robert James Clay <jame@rocasa.us>
@@ -16,9 +16,9 @@
 
 # PATH should only include /usr/* if it runs after the mountnfs.sh script
 PATH=/sbin:/usr/sbin:/bin:/usr/bin
-DESC="Synchronet BBS from CVS"
+DESC="Synchronet BBS"
 NAME=sbbs
-DAEMON=/opt/sbbscvs/exec/$NAME
+DAEMON=/opt/synchronet/exec/$NAME
 DAEMON_ARGS=""
 PIDFILE=/var/run/$NAME.pid
 SCRIPTNAME=/etc/init.d/$NAME
@@ -27,10 +27,10 @@ SCRIPTNAME=/etc/init.d/$NAME
 [ -x "$DAEMON" ] || exit 0
 
 # Read configuration variable file if it is present
-[ -r /etc/default/sbbscvs ] && . /etc/default/sbbscvs
+[ -r /etc/default/synchronet ] && . /etc/default/synchronet
 
 # Exit if not yet configured.
-[ "$SBBSCVS_ENABLE" = "No" ] && exit 0
+[ "$SBBS_ENABLE" = "No" ] && exit 0
 
 # Load the VERBOSE setting and other rcS variables
 . /lib/init/vars.sh
