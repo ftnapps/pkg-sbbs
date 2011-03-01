@@ -1,0 +1,66 @@
+#!/bin/bash
+# debian/create-orig-sourcce for synchronet package
+# Creating an original source archive for creating a Synchronet BBS Debian
+# package from the CVS archives availble at ftp.synchro.net.
+#
+# Copyright 2011 Robert James Clay <jame@rocasa.us>, GPL2+
+#
+
+# If the working directory path is not passed on the command line,
+# then use the current directory.
+if [ -z "$1" ]; then
+    # Use the current directory as the working directory 
+    WORKDIR=`pwd`
+else
+    # Set working directory to that passed on the command line
+    WORKDIR=$1
+    # If working directory is not present, create it & change to it
+    if [ ! -d $WORKDIR ]; then
+	mkdir $WORKDIR
+	cd $WORKDIR
+    fi
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_src.tgz from ftp://ftp.synchro.net.
+if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_src.tgz
+fi
+
+# If do not already have it in the working directory;  download the file 
+# sbbs_run.tgz from ftp://ftp.synchro.net. (Does not change as often.)
+if [ ! -e "$WORKDIR/sbbs_run.tgz" ]; then
+    wget ftp://ftp.synchro.net/sbbs_run.tgz
+fi
+
+# The format of the version string for the acrhive is YYMMDD, where YY is the
+# last two digits of the year, MM is the month number, & DD is the day number.
+# The date of the source code archive is noted in the FILE_ID.DIZ file in the
+# sbbs_src.tgz source archive available at ftp://ftp.synchro.net.  For now,
+# creating it from todays date.
+YYMMDD=`date +%y%m%d`
+
+# Set the current Synchronet version being used.
+SBVER="3.15a"
+
+# Set working source directory
+SRCVER=synchronet-$SBVER~$YYMMDD
+ORIGVER=synchronet_$SBVER~$YYMMDD
+
+# Set working source directory
+SRCDIR=$WORKDIR/$SRCVER
+
+# Create source directory named in the format synchronet-SBVER~YYMMDD if not already present
+if [ ! -d $SRCDIR ]; then
+    mkdir $SRCDIR
+fi
+
+# Extract contents of upstream source archives to the source working directory.
+cd $SRCDIR
+tar -xzf $WORKDIR/sbbs_src.tgz --exclude=CVS
+tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
+
+# Create the source archive from the working source directory.
+cd $WORKDIR
+tar cfj $ORIGVER.orig.tar.bz2 $SRCVER/ && rm -fr $SRCDIR
+
