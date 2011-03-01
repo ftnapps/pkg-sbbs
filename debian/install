@@ -2,6 +2,8 @@ ctrl/*	usr/share/synchronet/ctrl
 docs/_borders/*	usr/share/doc/synchronet/_borders
 docs/images/*	usr/share/doc/synchronet/images
 exec/*	opt/synchronet/exec
+exec/ircbots/*	opt/synchronet/exec/ircbots
+exec/load/*	opt/synchronet/exec/load
 exec/tone/*	opt/synchronet/exec/tone
 text/*	usr/share/synchronet/text
 node1/*	usr/share/synchronet/nodes/node1
