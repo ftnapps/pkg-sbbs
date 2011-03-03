@@ -1,2 +1,3 @@
 debian/examples/binkd.cfg
+debian/examples/sbbs.ini
 debian/examples/sbbsecho.cfg
