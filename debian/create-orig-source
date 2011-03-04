@@ -65,6 +65,8 @@ tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
 #
 # Correct the file permissions on the file ircd.conf
 chmod 644 $SRCDIR/ctrl/ircd.conf
+# Correct the file permissions on the file sync_pbgj1_grey_bg.gif
+chmod 644 $SRCDIR/web/root/images/default/sync_pbgj1_grey_bg.gif 
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
