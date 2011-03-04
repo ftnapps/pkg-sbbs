@@ -67,6 +67,8 @@ tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
 chmod 644 $SRCDIR/ctrl/ircd.conf
 # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
 chmod 644 $SRCDIR/web/root/images/default/sync_pbgj1_grey_bg.gif 
+# Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
+rm -f $SRCDIR/web/root/images/nightshade/Thumbs.db
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
