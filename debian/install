@@ -3,7 +3,6 @@ docs/_borders/*	usr/share/doc/synchronet/_borders
 docs/images/*	usr/share/doc/synchronet/images
 exec/*	opt/synchronet/exec
 exec/tone/*	opt/synchronet/exec/tone
-lib/cryptlib/linux.release/libcl.so.3.3.0	opt/synchronet/exec
 text/*	usr/share/synchronet/text
 node1/*	usr/share/synchronet/nodes/node1
 node2/*	usr/share/synchronet/nodes/node2
