@@ -10,7 +10,7 @@ Homepage: http://www.synchro.net
 
 Package: synchronet
 Architecture: i386
-Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common, sblibs
+Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common, adduser, sblibs
 Recommends: make, zip, unzip, dosemu, dosemu-freedos
 Suggests: binkd, arc, arj, unrar-free, unzoo, zoo, lha
 Provides: httpd, httpd-cgi, ftp-server, news-transport-system, pop3-server, telnet-server
