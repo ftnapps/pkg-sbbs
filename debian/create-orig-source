@@ -60,6 +60,12 @@ cd $SRCDIR
 tar -xzf $WORKDIR/sbbs_src.tgz --exclude=CVS
 tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
 
+#    Make adjustments/changes to source files as neccesary, prior to creating 
+#    the new source archive.
+#
+# Correct the file permissions on the file ircd.conf
+chmod 644 $SRCDIR/ctrl/ircd.conf
+
 # Create the source archive from the working source directory.
 cd $WORKDIR
 tar cfj $ORIGVER.orig.tar.bz2 $SRCVER/ && rm -fr $SRCDIR
