@@ -9,7 +9,7 @@ Vcs-Browser: http://git.rocasa.org/gitweb.cgi/sbbsdeb.git
 Homepage: http://www.synchro.net
 
 Package: synchronet
-Architecture: i386 amd64
+Architecture: amd64
 Depends: ${shlibs:Depends}, ${misc:Depends}, x11-common
 Recommends: make, zip, unzip, dosemu, dosemu-freedos, sblibcl, alpine-pico
 Suggests: binkd, arc, arj, unrar-free, zoo, lha
