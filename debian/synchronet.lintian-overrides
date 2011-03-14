@@ -1,13 +1,13 @@
-# debian/source.lintian-overrides for synchronet
+# lintian-overrides file for synchronet
 
 #    Per upstream:
 # synchronet is better suited to a /opt install.
 # A huge number of things use relative paths and those paths are almost always
 # relative to ctrl.  A fairly major scrub to replace those would be required.
-synchronet source: dir-or-file-in-opt
-synchronet source: file-in-unusual-dir
+synchronet binary: dir-or-file-in-opt
+synchronet binary: file-in-unusual-dir
 
 # mods/ is a standard directory but is distributed empty because it is 
 # only intended for use by the administrator of the system.
-synchronet source: package-contains-empty-directory opt/synchronet/mods/
+synchronet binary: package-contains-empty-directory opt/synchronet/mods/
 
