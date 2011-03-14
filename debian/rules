@@ -14,7 +14,7 @@ else
 endif
 
 # Set variable for hardware platform
-HW := "x64"
+HW := x64
 
 # Set SBBSDIR to base installation directory.
 export SBBSDIR=/opt/synchronet
