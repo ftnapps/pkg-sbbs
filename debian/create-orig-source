@@ -72,5 +72,5 @@ rm -f $SRCDIR/web/root/images/nightshade/Thumbs.db
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
-tar cfj $ORIGVER.orig.tar.bz2 $SRCVER/ && rm -fr $SRCDIR
+tar cfz $ORIGVER.orig.tar.gz $SRCVER/ && rm -fr $SRCDIR
 
