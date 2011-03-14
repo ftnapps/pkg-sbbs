@@ -48,11 +48,11 @@ clean:
 	rm -f build-stamp configure-stamp
 
 	# Add here commands to clean up after the build process.
-	-$(MAKE) -C src/sbbs3 clean
-	-$(MAKE) -C src/sbbs3/scfg clean
-	-$(MAKE) -C src/sbbs3/syncview clean
-	-$(MAKE) -C src/sbbs3/umonitor clean
-	-$(MAKE) -C src/sbbs3/uedit clean
+	$(MAKE) -C src/sbbs3 clean
+	$(MAKE) -C src/sbbs3/scfg clean
+	$(MAKE) -C src/sbbs3/syncview clean
+	$(MAKE) -C src/sbbs3/umonitor clean
+	$(MAKE) -C src/sbbs3/uedit clean
 
 	dh_clean 
 
