@@ -1,53 +1,111 @@
 Debian TODO for Synchronet BBS
 
+
+----------
 Packaging:
-- Find better way of passing the results of uname -m to the dh_install lines in debian/rules;
-  tried defining a variable but couldn't get that to work.  Define it completely outside of 
-  the target rule?
-- Even if the actual build is using the files from the dev packages for libnspr4 & libmozjs,
-  the rpath is getting set to the ones from the build system instead of where the libararies
-  are actually installed on a Debian system.  Set the library paths, per the syncunix.txt doc.
-- Add a call to the baja makefile in exec into the postinst script?
-- Create man pages for executables. (see if can do some from existing docs?)
-- debian/control:  Description - Add a note about the BBS shells that it can
-  emulate?  Add note about scripting languages available/usable?
-- Separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This would
-  allow for separate packaging for any similar extensions.
+
+- still need to do the auto install of the node directories!
+
+- xtrn/sbj:  the actual executables are not getting installed!  Thought I'd
+already taken care of this but that may have been for v3.14.
+
+- xtrn/sbl:  the actual executables are not getting installed!  Thought I'd
+already taken care of this but that may have been for v3.14.
+
+- Use a patch to set an explicit BAJAPATH in exec/makefile?  Or is it needed?
+BAJAPATH=/opt/sbbscvs/exec/baja
+
+- Currently manually setting the HW variable in debian/rules, in order to
+allow for the system it is being compiled on.  The debian build system
+always knows that, so just patch that part out?  Could also fix the issue
+where the SBBS build system doesn't appear to set that for i686 system.
+As it is;  will only work on an x64 system, so it needs to be at least
+generalized better.
+
+
+[	Use a patch to do this
+    # Correct the first lines of the files exec/gnats_cvs.js and exec/sendmail.js to 
+    # as follows:  "#!/opt/synchronet/exec/jsexec -x -c /opt/synchronet/ctrl"
+]
+    
+[	Use a patch to do this
+
+    # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
+    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other three
+    # instances of it on that line.  Those setup a more correct rpath in 
+    # the executables than that set by a regular compile & install.
+    # (Does assume that SBBSDIR is set at that point.)
+]
+
+- Even if the actual build is using the files from the dev packages for libnspr4 &
+libmozjs, the rpath is getting set to the ones from the build system instead of
+where the libararies are actually installed on a Debian system.  Set the library
+paths, per the syncunix.txt doc.  And/or use the above settings prior to compile.
+
+- Add examples etc for using dwww with the SBBS web server, to all of the 
+SBBS packaging.
+
+- Create man pages for executables?  See if can do some from existing docs,
+and/or use something like help2man to create the man pages.
+
+- Separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?  This
+would allow for separate packaging for any similar extensions.
+
 - Separate packaging for web templates, like for sbbs apps? 
+
 - At least for package purge;  delete /opt/synchronet/exec/*bin ?
+
 - Create a synchronet-dbg package?   (Check references.)  
+
 - Edit, adding what's neccessary for gtk programs;  possibly add as separate package?
-- The Java Telnet Applet (jta) is already a standard packaage in Debian:  investigate the use
-  of that version of jta, instead of the version that is distributed with Synchronet.  
+
+- The Java Telnet Applet (jta) is already a standard packaage in Debian:
+investigate the use of that version of jta, instead of what is distributed
+with Synchronet.  
+[	Do this during the build? creating the source archive?
+    # Also exclude or delete afterwards the directory web/root/telnet/tools.
+]
+
 
 Libraries:
-- When installed on a system where it was not compiled & an attempt is made to start it, sbbs
-  cannot find the libsbbs.so library file, which is installed in /opt/synchronet/exec.
-- Warnings by package checkers (lintian, linda) about RPATH setting in binaries.
-  Can that be defined at compile time? (search keywords RPATH, disable-rpath)  They could be
-  deleted/changed using chrpath cmd before building the package...
-- "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the same for the 
-  following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, libmailsrvr.so, & libservices.so.
-  That is an issue with the _name_ of the library file rather then with the file itself.  Esp. seems
-  to expect a version number in a particular format as part of the name. 
+- Warnings by package checker (lintian) about RPATH setting in binaries.
+Can that be defined at compile time? (search keywords RPATH, disable-rpath). They
+could be deleted/changed using chrpath cmd before building the package...
+
+- "dpkg-shlibdeps: warning: format of libcl.so not recognized".  Also get the
+same for the following libraries:  libsbbs.so, libftpsrvr.so, libwebsrvr.so, 
+libmailsrvr.so, & libservices.so.  That is an issue with the _name_ of the
+library file rather then with the file itself.  Esp. seems to expect a version
+number in a particular format as part of the name. Use sym links, if can find
+what the proper version numbers are?  (if any?)  (They're private libraries &
+I don't think synchronet actually cares...)
+
+- Made build-depends on libmozjs-dev unversioned;  however, it builds on a
+lenny system using the debian libmozjs package but fails on a squeeze system
+which uses a later version of the package.   In any case, add note about the
+dependancy to the debian readme, noting that it is available on debian v5?
+
 - Add usage of libsdl?  (libsdl1.2-dev, libsdl1.2debian-all?)
-- Add source compilation of cryptlib, instead of using precompiled library.  Need
-  this both for being able to do non i386 packages as well as just being neccessary
-  for the package to be accepted into Debian.   Haveing a separate cryptlib package
-  would enable it to be used for syncterm, although there could also be a
-  synchronet-common package to handle that.
+
+- Add source compilation of cryptlib, instead of using precompiled library?  Could
+use both for being able to do non i386 packages as well as just being neccessary
+for the package to be accepted into Debian (although there may be a licensing
+issue regarding commercial licensing).  Haveing a separate cryptlib package
+would also enable it to be used for syncterm, although there could also be a
+sbbs-common package to handle that.
+
+- Debian ITP # 418776, after resolve non-free zmodem code & similar issues?
+
 
 Configuration:
-- Names for synchronet user:group?  synchronet:sbbs?   
-- Create & use debian/po, so that debconf messages can be translated.
-- ctrl*/, text/*, web/*, data/*: debian packages only install/update to /usr/share/synchronet.
-  Add debconf questions about if to copy to runtime directory instead of manually setting it?
 - Prompting for some initial configuration options at installation ? (from Ragnarok)
-  hostname and sysop info (like system password) 
-  ports or services that you want to run. 
-  dove-net setup?
-  bbs services start at system startup?
+  a) hostname and sysop info (like system password) 
+  b) ports or services that you want to run. 
+  c) dove-net setup?
+  d) bbs services to start at system startup?
 
+- Create & use debian/po, so that debconf messages can be translated when are
+using those.
 
  
- -- Robert James Clay <jame@rocasa.us>  Mon,  1 Mar 2011 09:54 -0500
+ -- Robert James Clay <jame@rocasa.us>  Sun, 13 Mar 2011 22:01 -0400
