@@ -69,6 +69,12 @@ chmod 644 $SRCDIR/ctrl/ircd.conf
 chmod 644 $SRCDIR/web/root/images/default/sync_pbgj1_grey_bg.gif 
 # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
 rm -f $SRCDIR/web/root/images/nightshade/Thumbs.db
+# The original source archive comes with scripts in place of some of the xtrn executables
+# that are intended to find the executables created by the manual compile process.  That
+# is not neccesary for the debian installation.  Remove the scripts from the source archive
+# so that actual executables can be created and installed.
+rm -f $SRCDIR/xtrn/sbj/sbj
+rm -f $SRCDIR/xtrn/sbj/sbjclean
 
 # Create the source archive from the working source directory.
 cd $WORKDIR

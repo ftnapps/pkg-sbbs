@@ -38,6 +38,7 @@ build-stamp: configure-stamp
 	$(MAKE) -C src/sbbs3/syncview
 	$(MAKE) -C src/sbbs3/umonitor
 	$(MAKE) -C src/sbbs3/uedit
+	$(MAKE) -C xtrn/sbj
 	#
 
 	touch $@
@@ -53,6 +54,7 @@ clean:
 	$(MAKE) -C src/sbbs3/syncview clean
 	$(MAKE) -C src/sbbs3/umonitor clean
 	$(MAKE) -C src/sbbs3/uedit clean
+	$(MAKE) -C xtrn/sbj clean
 
 	dh_clean 
 

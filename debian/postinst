@@ -47,6 +47,10 @@ case "$1" in
     if [ ! -e "/opt/synchronet/ctrl/sbbs.ini" ]; then
 	/bin/cp /usr/share/doc/synchronet/examples/sbbs.ini /opt/synchronet/ctrl
     fi
+    # Install default xtrn/sbj/sbj.cfg if one is not already present
+    if [ ! -e "/opt/synchronet/xtrn/sbj/sbj.cfg" ]; then
+	/bin/cp /usr/share/doc/synchronet/examples/xtrn/xbj.cfg /opt/synchronet/xtrn/sbj
+    fi
 
     # Run the baja source makefile after installs/upgrades.
     /usr/bin/make -C /opt/synchronet/exec
