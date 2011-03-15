@@ -33,6 +33,7 @@ xtrn/sbl/sbl.doc	opt/synchronet/xtrn/sbl
 xtrn/sbl/sblpack	opt/synchronet/xtrn/sbl
 xtrn/sbl/smb2sbl	opt/synchronet/xtrn/sbl
 xtrn/sbl/sysop.txt	opt/synchronet/xtrn/sbl
+xtrn/smm/*	opt/synchronet/xtrn/smm
 xtrn/tbd/reroll	opt/synchronet/xtrn/tbd
 xtrn/tbd/tbd	opt/synchronet/xtrn/tbd
 xtrn/tbd/tbd.ins	opt/synchronet/xtrn/tbd
