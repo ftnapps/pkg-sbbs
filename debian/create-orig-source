@@ -72,9 +72,13 @@ rm -f $SRCDIR/web/root/images/nightshade/Thumbs.db
 # The original source archive comes with scripts in place of some of the xtrn executables
 # that are intended to find the executables created by the manual compile process.  That
 # is not neccesary for the debian installation.  Remove the scripts from the source archive
-# so that actual executables can be created and installed.
+# so that the actual executables can be created and installed.
 rm -f $SRCDIR/xtrn/sbj/sbj
 rm -f $SRCDIR/xtrn/sbj/sbjclean
+rm -f $SRCDIR/xtrn/sbj/sbl
+rm -f $SRCDIR/xtrn/sbj/sbl2smb
+rm -f $SRCDIR/xtrn/sbj/sblpack
+rm -f $SRCDIR/xtrn/sbj/smb2sbl
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
