@@ -56,7 +56,9 @@ case "$1" in
     /usr/bin/make -C /opt/synchronet/exec
 
     #  Set default user:group for synchronet install
-    chown -R synchronet:synchronet /opt/synchronet
+    chown -R sbbs:sbbs /opt/synchronet
+    #  Set default user:group for Synchronet BinkD directories
+    chown -R sbbs:sbbs /var/spool/sbbs
 
     ;;
 
