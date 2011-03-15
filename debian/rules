@@ -40,6 +40,7 @@ build-stamp: configure-stamp
 	$(MAKE) -C src/sbbs3/uedit
 	$(MAKE) -C xtrn/sbj
 	$(MAKE) -C xtrn/sbl
+	$(MAKE) -C xtrn/tbd
 	#
 
 	touch $@
@@ -57,6 +58,7 @@ clean:
 	$(MAKE) -C src/sbbs3/uedit clean
 	$(MAKE) -C xtrn/sbj clean
 	$(MAKE) -C xtrn/sbl clean
+	$(MAKE) -C xtrn/tbd clean
 
 	dh_clean 
 

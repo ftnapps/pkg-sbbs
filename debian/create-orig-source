@@ -79,6 +79,8 @@ rm -f $SRCDIR/xtrn/sbj/sbl
 rm -f $SRCDIR/xtrn/sbj/sbl2smb
 rm -f $SRCDIR/xtrn/sbj/sblpack
 rm -f $SRCDIR/xtrn/sbj/smb2sbl
+rm -f $SRCDIR/xtrn/tbd/reroll
+rm -f $SRCDIR/xtrn/tbd/tbd
 
 # Create the source archive from the working source directory.
 cd $WORKDIR
