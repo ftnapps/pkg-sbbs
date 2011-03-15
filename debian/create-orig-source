@@ -75,10 +75,10 @@ rm -f $SRCDIR/web/root/images/nightshade/Thumbs.db
 # so that the actual executables can be created and installed.
 rm -f $SRCDIR/xtrn/sbj/sbj
 rm -f $SRCDIR/xtrn/sbj/sbjclean
-rm -f $SRCDIR/xtrn/sbj/sbl
-rm -f $SRCDIR/xtrn/sbj/sbl2smb
-rm -f $SRCDIR/xtrn/sbj/sblpack
-rm -f $SRCDIR/xtrn/sbj/smb2sbl
+rm -f $SRCDIR/xtrn/sbl/sbl
+rm -f $SRCDIR/xtrn/sbl/sbl2smb
+rm -f $SRCDIR/xtrn/sbl/sblpack
+rm -f $SRCDIR/xtrn/sbl/smb2sbl
 rm -f $SRCDIR/xtrn/tbd/reroll
 rm -f $SRCDIR/xtrn/tbd/tbd
 
