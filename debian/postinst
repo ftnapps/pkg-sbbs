@@ -43,6 +43,10 @@ case "$1" in
 	# Populate the web directory with an intial set of files
 	/bin/cp -r /usr/share/synchronet/web/* /opt/synchronet/web
     fi
+    # Install default ctrl/sbbs.ini if one is not already present
+    if [ ! -e "/opt/synchronet/ctrl/sbbs.ini" ]; then
+	/bin/cp /usr/share/doc/synchronet/examples/sbbs.ini /opt/synchronet/ctrl
+    fi
 
     # Run the baja source makefile after installs/upgrades.
     /usr/bin/make -C /opt/synchronet/exec
