@@ -25,7 +25,12 @@ case "$1" in
     deluser --remove-home --system --group --quiet sbbs
     ;;
 
-    remove|upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
+    remove)
+    # Remove the Synchronet executables
+    rm -f /opt/synchronet/exec/*
+    ;;
+
+    upgrade|failed-upgrade|abort-install|abort-upgrade|disappear)
     ;;
 
     *)
