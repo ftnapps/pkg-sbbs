@@ -79,6 +79,14 @@ install: build
 	dh_install src/sbbs3/syncview/gcc.linux.$(HW).exe.debug/syncview /opt/synchronet/exec
 	dh_install src/sbbs3/uedit/gcc.linux.$(HW).exe.debug/uedit /opt/synchronet/exec
 	dh_install src/sbbs3/umonitor/gcc.linux.$(HW).exe.debug/umonitor /opt/synchronet/exec
+	dh_install xtrn/sbj/gcc.linux.$(HW).exe.debug/sbj /opt/synchronet/xtrn/sbj
+	dh_install xtrn/sbj/gcc.linux.$(HW).exe.debug/sbjclean /opt/synchronet/xtrn/sbj
+	dh_install xtrn/sbl/gcc.linux.$(HW).exe.debug/sbl /opt/synchronet/xtrn/sbl 
+	dh_install xtrn/sbl/gcc.linux.$(HW).exe.debug/sbl2smb /opt/synchronet/xtrn/sbl
+	dh_install xtrn/sbl/gcc.linux.$(HW).exe.debug/sblpack /opt/synchronet/xtrn/sbl
+	dh_install xtrn/sbl/gcc.linux.$(HW).exe.debug/smb2sbl /opt/synchronet/xtrn/sbl
+	dh_install xtrn/tbd/gcc.linux.$(HW).exe.debug/reroll /opt/synchronet/xtrn/tbd
+	dh_install xtrn/tbd/gcc.linux.$(HW).exe.debug/tbd /opt/synchronet/xtrn/tbd
 
 
 # Build architecture-independent files here.

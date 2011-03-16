@@ -1,11 +1,4 @@
 opt/synchronet
-opt/synchronet/exec
-opt/synchronet/exec/tone
-opt/synchronet/mods
-opt/synchronet/temp
-opt/synchronet/xtrn
-opt/synchronet/xtrn/sbj
-opt/synchronet/xtrn/sbl
 opt/synchronet/data
 opt/synchronet/data/dirs
 opt/synchronet/data/file
@@ -15,6 +8,15 @@ opt/synchronet/data/qnet
 opt/synchronet/data/subs
 opt/synchronet/data/user
 opt/synchronet/data/user/ptrs
+opt/synchronet/exec
+opt/synchronet/exec/tone
+opt/synchronet/mods
+opt/synchronet/temp
+opt/synchronet/xtrn
+opt/synchronet/xtrn/sbj
+opt/synchronet/xtrn/sbl
+opt/synchronet/xtrn/smm
+opt/synchronet/xtrn/tbd
 var/spool/sbbs
 var/spool/sbbs/inb
 var/spool/sbbs/outb
