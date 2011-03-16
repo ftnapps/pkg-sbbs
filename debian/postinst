@@ -23,37 +23,37 @@ case "$1" in
     # Create ctrl/ directory if not already present
     if [ ! -d "/opt/synchronet/ctrl/" ]; then
 	# Create ctrl/ directory
-	/bin/mkdir --mode=755 /opt/synchronet/ctrl
+	mkdir --mode=755 /opt/synchronet/ctrl
 	# Populate the ctrl directory with an intial set of files
-	/bin/cp /usr/share/synchronet/ctrl/* /opt/synchronet/ctrl
-	/bin/cp /usr/share/doc/synchronet/examples/sbbs.ini /opt/synchronet/ctrl
-	/bin/cp /usr/share/doc/synchronet/examples/sbbsecho.cfg /opt/synchronet/ctrl
+	cp /usr/share/synchronet/ctrl/* /opt/synchronet/ctrl
+	cp /usr/share/doc/synchronet/examples/sbbs.ini /opt/synchronet/ctrl
+	cp /usr/share/doc/synchronet/examples/sbbsecho.cfg /opt/synchronet/ctrl
     fi
     # Create text/ directory if not already present
     if [ ! -d "/opt/synchronet/text/" ]; then
 	# Create ctrl/ directory
-	/bin/mkdir --mode=755 /opt/synchronet/text
+	mkdir --mode=755 /opt/synchronet/text
 	# Populate the text directory with an intial set of files
-	/bin/cp -r /usr/share/synchronet/text/* /opt/synchronet/text
+	cp -r /usr/share/synchronet/text/* /opt/synchronet/text
     fi
     # Create web/ directory if not already present
     if [ ! -d "/opt/synchronet/web/" ]; then
 	# Create web/ directory
-	/bin/mkdir --mode=755 /opt/synchronet/web
+	mkdir --mode=755 /opt/synchronet/web
 	# Populate the web directory with an intial set of files
-	/bin/cp -r /usr/share/synchronet/web/* /opt/synchronet/web
+	cp -r /usr/share/synchronet/web/* /opt/synchronet/web
     fi
     # Install default xtrn/sbj/sbj.cfg if one is not already present
     if [ ! -e "/opt/synchronet/xtrn/sbj/sbj.cfg" ]; then
-	/bin/cp /usr/share/doc/synchronet/examples/xtrn/sbj.cfg /opt/synchronet/xtrn/sbj
+	cp /usr/share/doc/synchronet/examples/xtrn/sbj.cfg /opt/synchronet/xtrn/sbj
     fi
     # Install default xtrn/sbl/sbl.cfg if one is not already present
     if [ ! -e "/opt/synchronet/xtrn/sbl/sbl.cfg" ]; then
-	/bin/cp /usr/share/doc/synchronet/examples/xtrn/sbl.cfg /opt/synchronet/xtrn/sbl
+	cp /usr/share/doc/synchronet/examples/xtrn/sbl.cfg /opt/synchronet/xtrn/sbl
     fi
 
     # Run the baja source makefile after installs/upgrades.
-    /usr/bin/make -C /opt/synchronet/exec
+    make -C /opt/synchronet/exec
 
     #  Set default user:group for synchronet install
     chown -R sbbs:sbbs /opt/synchronet
