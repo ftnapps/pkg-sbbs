@@ -26,8 +26,6 @@ case "$1" in
 	mkdir --mode=755 /opt/synchronet/ctrl
 	# Populate the ctrl directory with an intial set of files
 	cp /usr/share/synchronet/ctrl/* /opt/synchronet/ctrl
-	cp /usr/share/doc/synchronet/examples/sbbs.ini /opt/synchronet/ctrl
-	cp /usr/share/doc/synchronet/examples/sbbsecho.cfg /opt/synchronet/ctrl
     fi
     # Create text/ directory if not already present
     if [ ! -d "/opt/synchronet/text/" ]; then

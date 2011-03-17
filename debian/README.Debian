@@ -5,11 +5,13 @@ Synchronet for Debian
 Initial Manual setup for running Synchronet
 -------------------------------------------
 
-1) Copy /usr/share/synchronet/node1,2,3,4 directories to /opt/synchronet/
-2) Correct directories in XTRN.DAT file in node directories or copy the example one
-3) Configure SBBS (Synchronet) as desired, running scfg & editing ctrl/* as neccessary.
-4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
-5) As root, or using sudo, run /etc/init.d/synchronet start
+1) Copy /usr/share/synchronet/node1,2,3,4 directories to /opt/synchronet/.
+2) Correct directories in XTRN.DAT file in node directories or copy the example one.
+3) Configure SBBS (Synchronet) as desired, running scfg & editing ctrl/* as
+   neccessary. Note that there are example sbbs.ini and sbbsecho.cfg files available
+   in the examples directory.
+4) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet.
+5) As root, or using sudo, run /etc/init.d/synchronet start.
 
 
 Directories
