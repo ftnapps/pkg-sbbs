@@ -1,0 +1,7 @@
+# profile for Synchronet user sbbs 
+#
+export PATH=$HOME/mods:$HOME/exec:$PATH
+export SBBSDIR=$HOME
+export SBBSCTRL=$HOME/ctrl
+#
+cd $HOME 
