@@ -1,0 +1,22 @@
+# debian/source.lintian-overrides for Synchronet
+
+#    Per upstream:
+# Synchronet is better suited to a /opt install.
+# A huge number of things use relative paths and those paths are almost always
+# relative to ctrl.  A fairly major scrub to replace those would be required.
+synchronet: dir-or-file-in-opt
+synchronet: file-in-unusual-dir
+
+# mods/ is a standard directory but is distributed empty because it is 
+# only intended for use by the administrator of the system.
+synchronet: package-contains-empty-directory opt/synchronet/mods/
+
+# temp/ is a standard directory being installed in the base Synchronet
+# directory but is distributed empty because it is only used during
+# operation.  It also assumes it is the only user of the directory.
+synchronet: package-contains-empty-directory opt/synchronet/temp/
+
+# jsexec is provided by the synchronet package and is not currently 
+# available otherwise;  override the lintian error.
+unusual-interpreter ./opt/synchronet/exec/gnats_cvs.js #!/opt/synchronet/exec/jsexec
+unusual-interpreter ./opt/synchronet/exec/sendmail.js #!/opt/synchronet/exec/jsexec

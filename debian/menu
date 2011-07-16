@@ -1,0 +1,2 @@
+?package(synchronet):needs="X11" section="Applications/System/Administration"\
+  title="Synchronet Configuration" command="/opt/synchronet/exec/scfg /opt/synchronet/ctrl -iX"

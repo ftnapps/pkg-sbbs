@@ -1,0 +1,16 @@
+Author: <jame@rocasa.us>
+Description: Line 133 in src/xpdev/link_list.c was causing the following error during a compile:
+link_list.c:133: error: incompatible types in assignment
+Commented that line out, as did upstream (reference revsion 1.37 of that file in
+cvs.synchro.net).
+--- synchronet-3.14a.orig/src/xpdev/link_list.c
++++ synchronet-3.14a/src/xpdev/link_list.c
+@@ -130,7 +130,7 @@
+ 	if(list->flags&LINK_LIST_SEMAPHORE) {
+ 		while(sem_destroy(&list->sem)==-1 && errno==EBUSY)
+ 			SLEEP(1);
+-		list->sem=NULL;
++		// list->sem=NULL;
+ 	}
+ #endif
+ 

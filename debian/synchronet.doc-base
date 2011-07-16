@@ -1,0 +1,10 @@
+Document: synchronet
+Title: Synchronet BBS
+Author: Rob Swindell
+Abstract: This documentation describes what Synchronet BBS
+ is and other information associated with it.
+Section: Network/Communication
+
+Format: HTML
+Index: /usr/share/doc/synchronet/index.htm
+Files: /usr/share/doc/synchronet/*.html

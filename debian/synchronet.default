@@ -1,0 +1,18 @@
+# Defaults for synchronet initscript
+# sourced by /etc/init.d/synchronet
+# installed at /etc/default/synchronet by the maintainer scripts
+
+#
+# This is a POSIX shell fragment
+#
+
+# Run Synchronet at startup ? Set to "Yes" after configuring Synchronet
+# in order for it to start at bootup.
+SBBS_ENABLE=No
+
+# SBBSCTRL should be set to the directory where the sbbs.ini file
+# is located.  
+export SBBSCTRL=/opt/synchronet/ctrl
+
+# Options that are passed to the Daemon.
+DAEMON_ARGS=$SBBSCTRL/sbbs.ini

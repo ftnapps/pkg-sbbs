@@ -1,0 +1,10 @@
+Synchronet for Debian
+----------------------
+
+    After configureing Synchronet, set SBBS_ENABLE to Yes in /etc/default/synchronet.
+
+    This version of the package uses a pre-compiled version of the cryptlib
+library and is therefore not ready for inclusion into the Debian distribution
+nor is it really usuable for other than i386.  See also debian/TODO.
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 11 Dec 2009 11:33 -0400

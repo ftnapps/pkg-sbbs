@@ -1,0 +1,41 @@
+Author: <jame@rocasa.us>
+Description: Remove the xtrn/sbj/sbj & xtrn/sbj/sbjclean files that come with
+the source archive, as they are actually only scripts that attempt
+to locate the real executables in a build directory, which is not
+needed for the debian package.
+--- synchronet-3.14a.orig/xtrn/sbj/sbj
++++ /dev/null
+@@ -1,15 +0,0 @@
+-#!/bin/sh
+-os=`uname | tr "[A-Z]" "[a-z]"`
+-exename=`basename $0`
+-dirname=`dirname $0`
+-if [ -x $dirname\/gcc.$os.exe.release/$exename ]
+-	then exec $dirname\/gcc.$os.exe.release/$exename $@
+-elif [ -x $dirname\/gcc.$os.exe.debug/$exename ]
+-	then exec $dirname\/gcc.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.release/$exename ]
+-	then exec $dirname\/*.$os.exe.release/$exename $@
+-elif [ -x $dirname\/*.$os.exe.debug/$exename ]
+-	then exec $dirname\/*.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.*/$exename ]
+-	then exec $dirname\/*.$os.exe.*/$exename $@
+-fi
+--- synchronet-3.14a.orig/xtrn/sbj/sbjclean
++++ /dev/null
+@@ -1,15 +0,0 @@
+-#!/bin/sh
+-os=`uname | tr "[A-Z]" "[a-z]"`
+-exename=`basename $0`
+-dirname=`dirname $0`
+-if [ -x $dirname\/gcc.$os.exe.release/$exename ]
+-	then exec $dirname\/gcc.$os.exe.release/$exename $@
+-elif [ -x $dirname\/gcc.$os.exe.debug/$exename ]
+-	then exec $dirname\/gcc.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.release/$exename ]
+-	then exec $dirname\/*.$os.exe.release/$exename $@
+-elif [ -x $dirname\/*.$os.exe.debug/$exename ]
+-	then exec $dirname\/*.$os.exe.debug/$exename $@
+-elif [ -x $dirname\/*.$os.exe.*/$exename ]
+-	then exec $dirname\/*.$os.exe.*/$exename $@
+-fi

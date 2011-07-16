@@ -1,0 +1,107 @@
+This package was originally debianized by Robert James Clay <jame@rocasa.us> 
+on Tue, 26 Feb 2008 17:15:57 -0500.
+
+It was downloaded from http://www.synchro.net
+
+Upstream Author: Rob Swindell <rob@synchro.net>
+
+Copyright: 1999-2008 Rob Swindell
+
+License:
+
+   This package is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or
+   (at your option) any later version.
+
+   This package is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this package; if not, write to the Free Software
+   Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
+
+On Debian systems, the complete text of the GNU General
+Public License can be found in `/usr/share/common-licenses/GPL'.
+
+# Debian packaging
+The Debian packaging is (C) 2008-2011, Robert James Clay <jame@rocasa.us> 
+and is licensed under the GPL, see above.
+
+# Library related files
+The files in the comio, conio, smblib, uifc, and xpdev are covered under
+the LGPL.
+
+Copyright: 
+
+    <Copyright (C) 2007 Rob Swindell>
+
+    This library is free software; you can redistribute it and/or
+    modify it under the terms of the GNU Lesser General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+    See the GNU Lesser General Public License for more details: lgpl.txt or
+    http://www.fsf.org/copyleft/lesser.html
+
+# user_info_to_sysop.js
+exec/user_info_to_sysop.js
+
+Author:  Michael J. Ryan <tracker1@theroughnecks.net>
+Copyright:  
+
+    <Copyright (C) 2006 Michael J. Ryan  
+
+It is licenced under the GNU General Public License (GPL, version 2)                               
+http://www.gnu.org/licenses/gpl.html
+
+# Synchronet Blackjack, xtrn/sbj
+Synchronet Blackjack - Multiuser Blackjack game for Synchronet BBS systems
+
+This source code is completely Public Domain and can be modified and
+distributed freely (as long as changes are documented).
+It is meant as an example to programmers of how to use the XSDK
+
+
+# Synchronet BBS List Door, xtrn/sbl
+
+Copyright 2000 Rob Swindell - http://www.synchro.net/copyright.html
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+See the GNU General Public License for more details:  see above.
+
+
+# Synchronet Match Maker, xtrn/smm
+Synchronet Match Maker  Version 2.10  Copyright 1996 Digital Dynamics
+
+#  Java Telnet Applet
+The Java Telnet Applet                                                                                                                  
+                                                                                                                                        
+Authors: Matthias L. Jugel (leo@first.gmd.de)                                                                                           
+         Marcus Mei.ner (msmeissn@cip.informatik.uni-erlangen.de) 
+
+See installed directory /usr/share/synchronet/web/root/telnet, where the files
+COPYING AND COPYING.LIB can be found.
+
+
+# zmodem related files
+The files sbbs3/zmodem.h and sbbs3/zmodem.c are derived from the
+zmtx/zmrx package available at
+ftp://ftp.netsw.org/net/modem/protocols/zmodem/zmtx-zmrx/
+
+The licence contained in the archive is:
+
+MCS allows you to use and copy/modify this source under the following
+conditions:
+
+  - MCS or Jacques Mattheij shall not be liable for any damages arising
+    from the use of this code
+  - the archive must be distributed as a whole leaving version numbers intact.
+    please do not distribute modifications; mail them back to us for inclusion
+    in the next release which should follow each other fairly quickly in
+    the beginning
+  - you will not use this software for commercial purposes.
+    (commercial licenses are available contact us for info)

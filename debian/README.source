@@ -1,0 +1,91 @@
+    README.source for Synchronet release 3.14a.
+
+
+Procedure for createing a source archive
+=========================================
+
+    # Create working directory named synchronet_3.14a, then change to that directory.
+cd /path/to/working/directory/synchronet-3.14a
+
+    # Download ssrc314a.tgz from ftp://vert.synchro.net/Synchronet/ to the working directory.
+wget ftp://vert.synchro.net/Synchronet/ssrc314a.tgz
+
+    # Extract contents of upstream source archive to working directory.
+tar -xzvf ssrc314a.tgz     
+    
+    # Now move the archive ssrc314a.tgz out of the working directory.
+mv ssrc314a.tgz ..
+
+    # Get the required modules for running synchronet.
+cvs -d :pserver:anonymous@cvs.synchro.net:/cvsroot/sbbs export -r sbbs314a run-sbbs3 
+    
+    # Remove the Jasascript Documentation arhives, as they are not needed when have the
+    # extracted documentation available.
+rm -f /docs/js/guide/CoreGuideJS15.zip
+rm -f /docs/js/guide/CoreReferenceJS15.zip
+
+    # Create the source archive from the working directory. 
+
+
+Patching the source archive
+============================
+
+This package uses quilt to manage all modifications to the upstream
+source.  Changes are stored in the source package as diffs in
+debian/patches and applied during the build.
+
+To configure quilt to use debian/patches instead of patches, you want
+either to export QUILT_PATCHES=debian/patches in your environment
+or use this snippet in your ~/.quiltrc:
+
+    for where in ./ ../ ../../ ../../../ ../../../../ ../../../../../; do
+        if [ -e ${where}debian/rules -a -d ${where}debian/patches ]; then
+                export QUILT_PATCHES=debian/patches
+                break
+        fi
+    done
+
+To get the fully patched source after unpacking the source package, cd to
+the root level of the source package and run:
+
+    quilt push -a
+
+The last patch listed in debian/patches/series will become the current
+patch.
+
+To add a new set of changes, first run quilt push -a, and then run:
+
+    quilt new <patch>
+
+where <patch> is a descriptive name for the patch, used as the filename in
+debian/patches.  Then, for every file that will be modified by this patch,
+run:
+
+    quilt add <file>
+
+before editing those files.  You must tell quilt with quilt add what files
+will be part of the patch before making changes or quilt will not work
+properly.  After editing the files, run:
+
+    quilt refresh
+
+to save the results as a patch.
+
+Alternately, if you already have an external patch and you just want to
+add it to the build system, run quilt push -a and then:
+
+    quilt import -P <patch> /path/to/patch
+    quilt push -a
+
+(add -p 0 to quilt import if needed). <patch> as above is the filename to
+use in debian/patches.  The last quilt push -a will apply the patch to
+make sure it works properly.
+
+To remove an existing patch from the list of patches that will be applied,
+run:
+
+    quilt delete <patch>
+
+You may need to run quilt pop -a to unapply patches first before running
+this command.
+

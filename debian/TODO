@@ -1,0 +1,80 @@
+Debian TODO for Synchronet
+
+Packaging:
+
+[	use a patch, or a cmd in debian/rules, or don't install to binary pkg.
+    # Delete web/root/images/nightshade/Thumbs.db (Unneeded and it causes a Lintian warning.)
+]
+
+[	use a patch, or chmod in debian/rules, or correct when creating orig
+    # Correct the file permissions on the file ircd.conf
+chmod 644 ctrl/ircd.conf
+    # Correct the file permissions on the file sync_pbgj1_grey_bg.gif
+chmod 644 web/root/images/default/sync_pbgj1_grey_bg.gif
+]
+
+[	Use a patch to do this
+    # Correct the first lines of the files exec/gnats_cvs.js and exec/sendmail.js to 
+    # as follows:  "#!/opt/synchronet/exec/jsexec -x -c /opt/synchronet/ctrl"
+]
+    
+- Reference http://vert.synchro.net/msgs/msg.ssjs?msg_sub=syncanno&message=25
+  for a messsage posted by DM regarding: "a bug in the v3.14a SCFG.EXE that
+  causes crashes when deleting message and file areas".  Find where he fixed
+  that in the code and use a patch to correct it for the debian package. The
+  msg was posted 4 Jan 2007.
+
+- Warnings by package checker (lintian) about RPATH setting in binaries?  If
+  still present, add to overrides.
+[	Use a patch set a better rpath in any case?
+
+    # On line 116 of src/sbbs3/GNUmakefile:   Change "$(PWD)/$LIBODIR)" to
+    # "$(SBBSDIR)/exec".  Remove the string "$(PWD)/" from the other three
+    # instances of it on that line.  That sets up a more correct rpath in 
+    # the executables than that set by a regular compile & install.
+    # (Does assume that SBBSDIR is set at that point.)
+]
+
+- Separate packaging for sbbs apps (sbl, sbj) to be installed to exec/xtrn?
+  This would allow for separate packaging for any similar extensions.
+
+- Separate packaging for web templates, like for sbbs apps? 
+
+- Create a synchronet-dbg package?   (Check references.)  
+
+- Edit, adding what's neccessary for gtk programs;  possibly add as separate
+  package?
+
+- The Java Telnet Applet (jta) is already a standard packaage in Debian:
+  investigate the use of that version of jta, instead of the version that is
+  distributed with synchronet.
+- When using the Debian jta, don't keep the distributed java telnet applet  
+[	Do this during the build? Or during the creation of the orig?
+    # Also exclude or delete afterwards the directory web/root/telnet/tools.
+    # Or leave it in the source archive but don't install it, in favor of using 
+    # the jta packaage already available.
+]
+
+- Create man pages for executables. (see if can do some from existing docs?)
+
+- Debian ITP # 418776, after resolve non-free zmodem issue?
+
+Configuration:
+- Prompting for some initial configuration options at installation ? (from
+  Ragnarok) hostname and sysop info (like system password), ports or services
+  that you want to run, dove-net setup?, bbs services start at system startup?
+  Anything that is configurable in the *.ini files could possibly be updated
+  using a program.  (Perl script?)
+- Create & use debian/po if use debconf messages, so they can be translated.
+
+Libraries:
+- Add usage of libsdl?  (libsdl1.2-dev, libsdl1.2debian-all?)
+
+- Add source compilation of cryptlib, instead of using precompiled library.
+  Need this both for being able to do non i386 packages as well as just being
+  neccessary for the package to be accepted into Debian.   Haveing a separate
+  cryptlib package would enable it to be used for syncterm, although there could
+  also be a synchronet-common package to handle that.
+
+
+ -- Robert James Clay <jame@rocasa.us>  Thu,  3 Mar 2011 19:20 -0500

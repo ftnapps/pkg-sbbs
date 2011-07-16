@@ -1,0 +1,55 @@
+Synchronet for Debian
+======================
+
+Initial manual setup for running Synchronet
+-------------------------------------------
+
+1) Copy (or create a symbolic link from) /usr/share/synchronet/text to /opt/synchronet/text
+2) Copy (or create a symbolic link from) /usr/share/synchronet/web to /opt/synchronet/web
+3) Copy /usr/share/synchronet/ctrl to /opt/synchronet/ctrl
+4) Configure Synchronet as desired, running scfg & editing ctrl/* as necessary
+5) Change the SBBS_ENABLE setting to Yes in /etc/default/synchronet
+6) As root, or using sudo, run /etc/init.d/synchronet start
+
+     The following online games are not actually provided with the Synchronet installation
+but are already configured:  DoorMUDv0.99, Food Fight!, & Dragons Hoard.
+
+
+Directories
+-----------
+
+    Synchronet (SBBS) directories are installed as follows:
+
+    Synchronet executables and libraries:
+exec/*	/opt/synchronet/exec
+xtrn/*	/opt/synchronet/xtrn
+
+    Cryptlib library file libcl.so.3.3.0 is installed to /usr/lib, and libcl.so
+    is a symlink to it.
+    
+    Synchronet ctrl, text, web, & data content are installed/updated as follows:
+ctrl/*  /opt/synchronet/ctrl 
+text/*  /usr/share/synchronet/text
+web/*   /usr/share/synchronet/web
+data/*	/var/opt/synchronet
+
+    Synchronet Documentation is installed as follows:
+doc/*	/usr/share/doc/synchronet  (except docs/js)
+    And a symbolic link is installed from /opt/synchronet/doc to there.
+
+    Example Debian ini/cfg files are installed to /usr/share/doc/synchronet/examples.
+    Also, doc-base is used to register the docs index.htm file
+
+    A /var/spool/sbbs directory is created, and is used by the example Debian
+    binkd.cfg file.
+
+
+Other
+-----
+
+    See also debian/NEWS.debian and debian/TODO.   See debian/README.source for
+    notes about how the Synchronet source archve was put together.
+
+
+
+ -- Robert James Clay <jame@rocasa.us>  Fri, 11 Dec 2009 11:34 -0400

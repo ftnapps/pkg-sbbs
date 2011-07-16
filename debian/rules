@@ -1,0 +1,120 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Synchronet package debian/rules.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+# Use dpatch
+include /usr/share/quilt/quilt.make
+
+CFLAGS = -Wall -g
+
+ifneq (,$(findstring noopt,$(DEB_BUILD_OPTIONS)))
+	CFLAGS += -O0
+else
+	CFLAGS += -O2
+endif
+
+# Set SBBSDIR to base installation directory.
+export SBBSDIR=/opt/synchronet
+
+configure: configure-stamp
+configure-stamp: $(QUILT_STAMPFN)
+	dh_testdir
+	# Add here commands to configure the package.
+
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp 
+	dh_testdir
+
+	# Add here commands to compile the package.
+	$(MAKE) -C src/sbbs3 DEBUG=1 JSINCLUDE=/usr/include/sbbs/mozilla/js JSLIBDIR=/usr/lib/sbbs NSPRINCLUDE=/usr/include/sbbs/mozilla/nspr NSPRDIR=/usr/lib/sbbs CRYPTLIBINCLUDE=/usr/include/sbbs/cryptlib CRYPTLIBDIR=/usr/lib/sbbs USE_DOSEMU=1
+	$(MAKE) -C src/sbbs3/scfg DEBUG=1
+	$(MAKE) -C src/sbbs3/syncview
+	$(MAKE) -C src/sbbs3/umonitor
+	$(MAKE) -C src/sbbs3/uedit
+	$(MAKE) -C xtrn/sbj
+	$(MAKE) -C xtrn/sbl
+	$(MAKE) -C xtrn/tbd
+	#
+
+	touch $@
+
+clean: clean1 unpatch
+clean1:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp configure-stamp
+
+	# Add here commands to clean up after the build process.
+	$(MAKE) -C src/sbbs3 clean
+	$(MAKE) -C src/sbbs3/scfg clean
+	$(MAKE) -C src/sbbs3/syncview clean
+	$(MAKE) -C src/sbbs3/umonitor clean
+	$(MAKE) -C src/sbbs3/uedit clean
+	$(MAKE) -C xtrn/sbj clean
+	$(MAKE) -C xtrn/sbl clean
+	#$(MAKE) -C xtrn/tbd clean
+
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_prep
+	dh_installdirs
+
+	# Add here commands to install the package into debian/synchronet.
+	dh_install src/conio/gcc.linux.lib.debug/libciolib_mt.a /opt/synchronet/exec
+	dh_install src/smblib/gcc.linux.lib.debug/libsmb.a /opt/synchronet/exec
+	dh_install src/uifc/gcc.linux.lib.debug/libuifc_mt.a /opt/synchronet/exec
+	dh_install src/xpdev/gcc.linux.lib.debug/libxpdev* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.lib.debug/lib* /opt/synchronet/exec
+	dh_install src/sbbs3/gcc.linux.exe.debug/* /opt/synchronet/exec
+	dh_install src/sbbs3/scfg/gcc.linux.exe.debug/scfg* /opt/synchronet/exec
+	dh_install src/sbbs3/syncview/gcc.linux.exe.debug/syncview /opt/synchronet/exec
+	dh_install src/sbbs3/uedit/gcc.linux.exe.debug/uedit /opt/synchronet/exec
+	dh_install src/sbbs3/umonitor/gcc.linux.exe.debug/umonitor /opt/synchronet/exec
+	dh_install xtrn/sbj/gcc.linux.exe.debug/sbjclean /opt/synchronet/xtrn/sbj
+	dh_install xtrn/sbj/gcc.linux.exe.debug/sbj /opt/synchronet/xtrn/sbj
+	dh_install xtrn/sbl/gcc.linux.exe.debug/sbl /opt/synchronet/xtrn/sbl
+	dh_install xtrn/sbl/gcc.linux.exe.debug/sbl2smb /opt/synchronet/xtrn/sbl
+	dh_install xtrn/sbl/gcc.linux.exe.debug/sblpack /opt/synchronet/xtrn/sbl
+	dh_install xtrn/sbl/gcc.linux.exe.debug/smb2sbl /opt/synchronet/xtrn/sbl
+	dh_install xtrn/tbd/gcc.linux.exe.debug/tbd /opt/synchronet/xtrn/tbd
+	dh_install xtrn/tbd/gcc.linux.exe.debug/reroll /opt/synchronet/xtrn/tbd
+	# Lintian overrides file
+	install -c -m 444 debian/synchronet.lintian-overrides debian/synchronet/usr/share/lintian/overrides/synchronet
+
+# Build architecture-independent files here.
+binary-indep: build install
+# We have nothing to do by default.
+
+# Build architecture-dependent files here.
+binary-arch: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+	dh_install
+	dh_installinit
+	dh_installman debian/synchronet.1
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure patch unpatch
