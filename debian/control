@@ -4,8 +4,8 @@ Priority: extra
 Maintainer: Robert James Clay <jame@rocasa.us>
 Build-Depends: debhelper (>= 7.0.15), libncurses5-dev, libnspr4-dev, libmozjs-dev, libcap2-dev, libx11-dev, sblibcl-dev
 Standards-Version: 3.9.0
-Vcs-Git: git://git.rocasa.org/sbbsdeb.git
-Vcs-Browser: http://git.rocasa.org/gitweb.cgi/sbbsdeb.git
+Vcs-Git: git://github.com/jame/pkg-sbbs.git
+Vcs-Browser: http://github.com/jame/pkg-sbbs
 Homepage: http://www.synchro.net
 
 Package: synchronet
