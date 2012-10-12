@@ -16,15 +16,15 @@ else
     WORKDIR=$1
     # If working directory is not present, create it & change to it
     if [ ! -d $WORKDIR ]; then
-	mkdir $WORKDIR
-	cd $WORKDIR
+        mkdir $WORKDIR
+        cd $WORKDIR
     fi
 fi
 
 # If do not already have it in the working directory;  download the file 
 # sbbs_src.tgz from ftp://ftp.synchro.net.
-if [ ! -e "$WORKDIR/sbbs_src.tgz" ]; then
-    wget ftp://ftp.synchro.net/sbbs_src.tgz
+if [ ! -e "$WORKDIR/ssrc315b.tgz" ]; then
+    wget ftp://ftp.synchro.net/ssrc315b.tgz
 fi
 
 # If do not already have it in the working directory;  download the file 
@@ -41,11 +41,11 @@ fi
 YYMMDD=`date +%y%m%d`
 
 # Set the current Synchronet version being used.
-SBVER="3.15a"
+SBVER="3.15b"
 
 # Set working source directory
-SRCVER=synchronet-$SBVER~$YYMMDD
-ORIGVER=synchronet_$SBVER~$YYMMDD
+SRCVER=synchronet-$SBVER
+ORIGVER=synchronet_$SBVER
 
 # Set working source directory
 SRCDIR=$WORKDIR/$SRCVER
@@ -57,7 +57,7 @@ fi
 
 # Extract contents of upstream source archives to the source working directory.
 cd $SRCDIR
-tar -xzf $WORKDIR/sbbs_src.tgz --exclude=CVS
+tar -xzf $WORKDIR/ssrc315b.tgz --exclude=CVS
 tar -xzf $WORKDIR/sbbs_run.tgz --exclude=CVS
 
 #    Make adjustments/changes to source files as neccesary, prior to creating 
@@ -85,4 +85,5 @@ rm -f $SRCDIR/xtrn/tbd/tbd
 # Create the source archive from the working source directory.
 cd $WORKDIR
 tar cfz $ORIGVER.orig.tar.gz $SRCVER/ && rm -fr $SRCDIR
+
 
